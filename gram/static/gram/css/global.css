@@ -36,9 +36,9 @@ html:focus-within {
 /* // Set core body defaults */
 body {
   line-height: 1.5;
-  color: #dbdfe6;
+  color: #E3F8FF;
   font-family: "Outfit", sans-serif;
-  background-color: #1F2041;
+  background-color: #240843;
   text-rendering: optimizeSpeed;
 }
 
@@ -83,16 +83,16 @@ select {
 }
 
 ::-webkit-scrollbar-track {
-  background: #dbdfe6;
+  background: #E3F8FF;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1F2041;
+  background: #240843;
   margin: 0.2rem;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #abb5c4;
+  background: #D5F4FF;
 }
 
 input:-webkit-autofill,

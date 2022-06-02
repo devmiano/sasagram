@@ -1,0 +1,143 @@
+// Flex Containers
+@mixin row-center {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin col-center {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+}
+
+@mixin row-between {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+@mixin col-start {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+@mixin row-start {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+
+@mixin grid-one {
+	gap: 1rem;
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+@mixin grid-two {
+	gap: 1rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+@mixin grid-three {
+	gap: 1rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+// Links and Buttons
+@mixin link {
+	text-decoration: none;
+}
+@mixin input {
+	outline: none;
+	color: $sasa-300;
+	font-size: 1rem;
+	margin: 0.5rem 0;
+	padding: 0.4rem 0.8rem;
+	background: transparent;
+	text-transform: uppercase;
+  border-bottom: 2px solid $sasa-500;
+
+	&::placeholder {
+		color: $sasa-100;
+		background: transparent;
+	}
+	&:focus {
+		color: $sasa-100;
+		background: transparent;
+	}
+	&:active {
+		color: $sasa-100;
+		background: transparent;
+	}
+	&:focus-visible {
+		color: $sasa-100;
+		background: transparent;
+	}
+}
+
+@mixin btn {
+	border: none;
+	outline: none;
+	color: $white;
+	cursor: pointer;
+	background: $black;
+	border-radius: 0rem;
+	letter-spacing: 0.1rem;
+	padding: 0.4rem 0.8rem;
+	text-transform: uppercase;
+
+	&:hover {
+		color: $black;
+		background: $white;
+		border: 2px solid $black;
+	}
+}
+@mixin btn-alt {
+	color: $white;
+	outline: none;
+	cursor: pointer;
+	font-size: 0.8rem;
+	text-decoration: none;
+	padding: 0.7rem 1rem;
+	letter-spacing: 0.2rem;
+	background: transparent;
+	text-transform: uppercase;
+	border: 2px solid $white;
+
+	&:hover {
+		color: $black;
+		background: $white;
+	}
+}
+
+// Image
+@mixin image {
+	background-size: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+// Media Queries
+
+// Tablet
+@mixin for-tab {
+	@media screen and (min-width: 0px) and(max-width: 768px) {
+		@content;
+	}
+}
+
+// Desktop
+@mixin for-desktop {
+	@media screen and (min-width: 769px) and (max-width: 4000px) {
+		@content;
+	}
+}

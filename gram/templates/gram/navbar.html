@@ -1,0 +1,15 @@
+<nav class="navbar">
+	<a href="/">Sasagram</a>
+	{% if user.is_authenticated %}
+	<div class="links">
+		<a href="/accounts/password/change">Change Password</a>
+		<a href="{% url 'profile' current_user %}">{{current_user}}</a>
+		<a href="accounts/logout">Logout</a>
+	</div>
+	{% else %}
+	<div class="links">
+		<a class="btn btn-default" href="/accounts/register">Join</a>
+		<a class="btn btn-default" href="/accounts/login">Login</a>
+	</div>
+	{% endif %}
+</nav>

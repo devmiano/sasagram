@@ -6,6 +6,15 @@ name = "pypi"
 [packages]
 django = "*"
 django-debug-toolbar = "*"
+pillow = "*"
+coverage = "*"
+psycopg2 = "*"
+gunicorn = "*"
+whitenoise = "*"
+django-sass = "*"
+python-decouple = "*"
+dj-database-url = "*"
+django-registration = "*"
 
 [dev-packages]
 

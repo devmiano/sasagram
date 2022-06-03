@@ -5,6 +5,7 @@
 #footer {
 	gap: 0.5rem;
 	width: 100%;
+	padding: 1rem;
 	margin-top: auto;
 	@include grid-three;
 
@@ -14,7 +15,7 @@
 	}
 
 	.text {
-		@include text;
+		@include small;
 		color: $sasa-300;
 		text-align: left;
 
@@ -24,13 +25,13 @@
 	}
 
 	.copy {
-		@include text;
+		@include small;
 		color: $sasa-200;
 		text-align: center;
 
 		.gram {
-			@include text;
-			font-weight: 400;
+			@include small;
+			font-weight: 500;
 		}
 
 		@include for-tab {
@@ -39,7 +40,7 @@
 	}
 
 	.alt {
-		@include text;
+		@include small;
 		color: $sasa-100;
 		text-align: right;
 

@@ -2,17 +2,37 @@
 @import 'mixins';
 @import 'palette';
 
+.forms {
+	width: 60%;
+	min-height: 70vh;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+}
+
 #form {
+	width: 100%;
+
 	.group {
+		width: 100%;
+		margin: 0.7rem 0;
 		@include col-start;
+
 		.label {
-			@include subtext;
+			@include small;
+			color: $ash-500;
 		}
+
 		.input {
+			width: 100%;
 			@include input;
 		}
 	}
+
 	.btn {
+		width: 100%;
 		@include btn;
+		margin-top: 1.5rem;
 	}
 }

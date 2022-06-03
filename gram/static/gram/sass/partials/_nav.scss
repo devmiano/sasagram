@@ -67,3 +67,19 @@
 #userPathOne {
 	fill: $sasa-100;
 }
+
+#topbar {
+	width: 60%;
+
+	.btn {
+		float: right;
+		@include link;
+		color: $sasa-200;
+		margin: 0 0.5rem;
+
+		&:hover,
+		&:active {
+			color: $sasa-100;
+		}
+	}
+}

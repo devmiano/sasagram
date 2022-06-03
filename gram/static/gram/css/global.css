@@ -23,32 +23,32 @@
 }
 
 #logo {
-  height: 2rem;
+  height: 1.5rem;
   width: fit-content;
 }
 
 #home {
-  height: 2rem;
+  height: 1.5rem;
   width: fit-content;
 }
 
 #search {
-  height: 2rem;
+  height: 1.5rem;
   width: fit-content;
 }
 
 #heart {
-  height: 2rem;
+  height: 1.5rem;
   width: fit-content;
 }
 
 #add {
-  height: 2rem;
+  height: 1.5rem;
   width: fit-content;
 }
 
 #user {
-  height: 2rem;
+  height: 1.5rem;
   width: fit-content;
 }
 
@@ -76,7 +76,37 @@
   fill: #FEEA49;
 }
 
+#topbar {
+  width: 60%;
+}
+
+#topbar .btn {
+  float: right;
+  text-decoration: none;
+  color: #10f9f9;
+  margin: 0 0.5rem;
+}
+
+#topbar .btn:hover, #topbar .btn:active {
+  color: #FEEA49;
+}
+
+.forms {
+  width: 60%;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#form {
+  width: 100%;
+}
+
 #form .group {
+  width: 100%;
+  margin: 0.7rem 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -84,20 +114,21 @@
 }
 
 #form .group .label {
-  line-height: 1;
-  font-size: 1.3rem;
+  font-weight: 200;
+  font-size: 0.84rem;
   font-family: "Outfit", sans-serif;
   letter-spacing: 0.05rem;
+  color: #b3b3d0;
 }
 
 #form .group .input {
+  width: 100%;
   outline: none;
-  color: #FEEA49;
+  color: #10f9f9;
   font-size: 1rem;
-  margin: 0.5rem 0;
+  padding: 0.5rem 0;
   border-width: 0 0 3px;
-  border-color: #10f9f9;
-  padding: 0.4rem 0.8rem;
+  border-color: #5915A7;
   background: transparent;
 }
 
@@ -125,19 +156,21 @@
 }
 
 #form .btn {
+  width: 100%;
   border: none;
   outline: none;
-  color: #FEEA49;
   cursor: pointer;
-  background: #8F3FEB;
+  color: #f2f2f7;
+  background: #ff1f93;
   border-radius: 0.2rem;
   letter-spacing: 0.1rem;
-  padding: 0.4rem 0.8rem;
+  padding: 0.5rem 0.8rem;
+  margin-top: 1.5rem;
 }
 
 #form .btn:hover, #form .btn:active {
-  color: #10f9f9;
-  background: #ff1f93;
+  color: #5915A7;
+  background: #FEEA49;
 }
 
 #form .btn:focus {
@@ -158,10 +191,21 @@
 
 #app #main {
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+}
+
+#app #main .title {
+  margin: 1rem 0;
+  line-height: 1;
+  font-weight: 500;
+  font-size: 3.2rem;
+  font-family: "Outfit", sans-serif;
+  letter-spacing: 0.1rem;
+  color: #FEEA49;
 }
 
 #hero {

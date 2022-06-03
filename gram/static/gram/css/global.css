@@ -1,3 +1,68 @@
+#form .group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#form .group .label {
+  line-height: 1;
+  font-size: 1.3rem;
+  font-family: "Outfit", sans-serif;
+  letter-spacing: 0.05rem;
+}
+
+#form .group .input {
+  outline: none;
+  color: #73DBFF;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  border-width: 0 0 3px;
+  border-color: #F25282;
+  padding: 0.4rem 0.8rem;
+  background: transparent;
+}
+
+#form .group .input::placeholder {
+  color: #FEEA49;
+  background: transparent;
+}
+
+#form .group .input:focus {
+  color: #FEEA49;
+  border-color: #73DBFF;
+  background: transparent;
+}
+
+#form .group .input:active {
+  color: #FEEA49;
+  border-color: #73DBFF;
+  background: transparent;
+}
+
+#form .group .input:focus-visible {
+  color: #FEEA49;
+  border-color: #73DBFF;
+  background: transparent;
+}
+
+#form .btn {
+  border: none;
+  outline: none;
+  color: #73DBFF;
+  cursor: pointer;
+  background: #120421;
+  border-radius: 0rem;
+  letter-spacing: 0.1rem;
+  padding: 0.4rem 0.8rem;
+}
+
+#form .btn:hover {
+  color: #120421;
+  background: #FEEA49;
+  border: 2px solid #120421;
+}
+
 #app {
   width: 100%;
   display: flex;

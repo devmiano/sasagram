@@ -1,0 +1,18 @@
+@import 'type';
+@import 'mixins';
+@import 'palette';
+
+#form {
+	.group {
+		@include col-start;
+		.label {
+			@include subtext;
+		}
+		.input {
+			@include input;
+		}
+	}
+	.btn {
+		@include btn;
+	}
+}

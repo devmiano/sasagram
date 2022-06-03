@@ -11,3 +11,27 @@ def index(request):
   }
   
   return render(request, template, context)
+
+def join(request):
+  title = 'Join Sasagram'
+  template = 'gram/auth/join.html'
+  current_user = request.user
+  
+  context = {
+    'title': title,
+    'current_user': current_user,
+  }
+  
+  return render(request, template, context)
+
+def login(request):
+  title = 'Login to Sasagram'
+  template = 'gram/auth/login.html'
+  current_user = request.user
+  
+  context = {
+    'title': title,
+    'current_user': current_user,
+  }
+  
+  return render(request, template, context)

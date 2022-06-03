@@ -61,25 +61,31 @@
 	color: $sasa-300;
 	font-size: 1rem;
 	margin: 0.5rem 0;
+	border-width: 0 0 3px;
+  border-color: $sasa-500;
 	padding: 0.4rem 0.8rem;
 	background: transparent;
-	text-transform: uppercase;
-  border-bottom: 2px solid $sasa-500;
 
 	&::placeholder {
 		color: $sasa-100;
 		background: transparent;
 	}
+
 	&:focus {
 		color: $sasa-100;
+		border-color: $sasa-300;
 		background: transparent;
 	}
+
 	&:active {
 		color: $sasa-100;
+		border-color: $sasa-300;
 		background: transparent;
 	}
+
 	&:focus-visible {
 		color: $sasa-100;
+		border-color: $sasa-300;
 		background: transparent;
 	}
 }
@@ -87,22 +93,21 @@
 @mixin btn {
 	border: none;
 	outline: none;
-	color: $white;
+	color: $sasa-300;
 	cursor: pointer;
-	background: $black;
+	background: $dark;
 	border-radius: 0rem;
 	letter-spacing: 0.1rem;
 	padding: 0.4rem 0.8rem;
-	text-transform: uppercase;
 
 	&:hover {
-		color: $black;
-		background: $white;
-		border: 2px solid $black;
+		color: $dark;
+		background: $sasa-100;
+		border: 2px solid $dark;
 	}
 }
 @mixin btn-alt {
-	color: $white;
+	color: $sasa-100;
 	outline: none;
 	cursor: pointer;
 	font-size: 0.8rem;
@@ -111,11 +116,11 @@
 	letter-spacing: 0.2rem;
 	background: transparent;
 	text-transform: uppercase;
-	border: 2px solid $white;
+	border: 2px solid $sasa-100;
 
 	&:hover {
-		color: $black;
-		background: $white;
+		color: $dark;
+		background: $sasa-100;
 	}
 }
 

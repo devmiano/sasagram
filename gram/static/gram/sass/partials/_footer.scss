@@ -1,3 +1,7 @@
+@import 'type';
+@import 'mixins';
+@import 'palette';
+
 #footer {
 	gap: 0.5rem;
 	width: 100%;
@@ -11,9 +15,8 @@
 
 	.text {
 		@include text;
-		padding: 1rem;
 		color: $sasa-500;
-		text-align: center;
+		text-align: left;
 
 		@include for-tab {
 			padding: 0.5rem 1rem;
@@ -21,11 +24,24 @@
 	}
 
 	.copy {
-    padding: 1rem;
+		@include text;
 		color: $sasa-300;
-		font-size: 1.7rem;
-		@include brandtext;
 		text-align: center;
+
+		.gram {
+			font-size: 1.5rem;
+			@include brandtext;
+		}
+
+		@include for-tab {
+			padding: 0.5rem 1rem;
+		}
+	}
+
+	.alt {
+		@include text;
+		color: $sasa-100;
+		text-align: right;
 
 		@include for-tab {
 			padding: 0.5rem 1rem;

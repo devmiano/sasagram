@@ -1,0 +1,19 @@
+@import 'type';
+@import 'mixins';
+@import 'palette';
+
+#navbar {
+	width: 100%;
+	height: 2rem;
+	@include row-between;
+	background-color: $dark-300;
+
+	.navbrand {
+		height: 100%;
+		width: fit-content;
+
+		.logo {
+			height: 100%;
+		}
+	}
+}

@@ -41,8 +41,9 @@ html:focus-within {
 body {
 	line-height: 1.5;
 	color: $ash-200;
+	font-weight: 300;
 	font-family: $outfit;
-	background-color: $bg;
+	background-color: $dark-400;
 	text-rendering: optimizeSpeed;
 }
 
@@ -89,16 +90,16 @@ select {
 }
 
 ::-webkit-scrollbar-track {
-	background: $ash-200;
+	background: $dark-400;
 }
 
 ::-webkit-scrollbar-thumb {
-	background: $bg;
+	background: $sasa-100;
 	margin: 0.2rem;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: $ash-300;
+	background: $sasa-500;
 }
 
 input:-webkit-autofill,

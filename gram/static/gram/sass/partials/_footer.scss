@@ -15,7 +15,7 @@
 
 	.text {
 		@include text;
-		color: $sasa-500;
+		color: $sasa-300;
 		text-align: left;
 
 		@include for-tab {
@@ -25,12 +25,12 @@
 
 	.copy {
 		@include text;
-		color: $sasa-300;
+		color: $sasa-200;
 		text-align: center;
 
 		.gram {
-			font-size: 1.5rem;
-			@include brandtext;
+			@include text;
+			font-weight: 400;
 		}
 
 		@include for-tab {

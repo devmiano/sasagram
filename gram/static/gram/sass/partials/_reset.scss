@@ -43,7 +43,7 @@ body {
 	color: $ash-200;
 	font-weight: 300;
 	font-family: $outfit;
-	background-color: $dark-400;
+	background-color: $black;
 	text-rendering: optimizeSpeed;
 }
 
@@ -90,16 +90,16 @@ select {
 }
 
 ::-webkit-scrollbar-track {
-	background: $dark-400;
+	background: $dark-500;
 }
 
 ::-webkit-scrollbar-thumb {
-	background: $sasa-100;
+	background: $sasa-300;
 	margin: 0.2rem;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: $sasa-500;
+	background: $sasa-200;
 }
 
 input:-webkit-autofill,

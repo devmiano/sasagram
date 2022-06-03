@@ -58,33 +58,33 @@
 }
 @mixin input {
 	outline: none;
-	color: $sasa-300;
+	color: $sasa-100;
 	font-size: 1rem;
 	margin: 0.5rem 0;
 	border-width: 0 0 3px;
-  border-color: $sasa-500;
+  border-color: $sasa-200;
 	padding: 0.4rem 0.8rem;
 	background: transparent;
 
 	&::placeholder {
-		color: $sasa-100;
+		color: $sasa-200;
 		background: transparent;
 	}
 
 	&:focus {
-		color: $sasa-100;
+		color: $sasa-200;
 		border-color: $sasa-300;
 		background: transparent;
 	}
 
 	&:active {
-		color: $sasa-100;
+		color: $sasa-200;
 		border-color: $sasa-300;
 		background: transparent;
 	}
 
 	&:focus-visible {
-		color: $sasa-100;
+		color: $sasa-200;
 		border-color: $sasa-300;
 		background: transparent;
 	}
@@ -93,17 +93,16 @@
 @mixin btn {
 	border: none;
 	outline: none;
-	color: $sasa-300;
+	color: $sasa-100;
 	cursor: pointer;
-	background: $dark;
-	border-radius: 0rem;
+	background: $sasa-400;
+	border-radius: 0.2rem;
 	letter-spacing: 0.1rem;
 	padding: 0.4rem 0.8rem;
 
 	&:hover {
-		color: $dark;
-		background: $sasa-100;
-		border: 2px solid $dark;
+		color: $sasa-200;
+		background: $sasa-300;
 	}
 }
 @mixin btn-alt {
@@ -119,7 +118,6 @@
 	border: 2px solid $sasa-100;
 
 	&:hover {
-		color: $dark;
 		background: $sasa-100;
 	}
 }

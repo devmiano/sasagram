@@ -4,28 +4,66 @@
 
 #navbar {
 	width: 100%;
-	height: 2rem;
+	padding: 1rem;
 	@include row-between;
 
-	.navbrand {
+	.menu {
 		height: 100%;
+		@include grid-four;
 
-		.logo {
+		.link {
 			height: 100%;
-			width: fit-content;
 		}
 	}
 
 	.link {
 		height: 100%;
-
-		.user {
-			height: 100%;
-			width: fit-content;
-
-			.icon {
-				height: 100%;
-			}
-		}
 	}
+}
+
+#logo {
+	@include icons;
+}
+
+#home {
+	@include icons;
+}
+
+#search {
+	@include icons;
+}
+
+#heart {
+	@include icons;
+}
+
+#add {
+	@include icons;
+}
+
+#user {
+	@include icons;
+}
+
+#homePath {
+	fill: $sasa-200;
+}
+
+#searchPath {
+	fill: $sasa-100;
+}
+
+#heartPath {
+	fill: $sasa-300;
+}
+
+#addPath {
+	fill: $sasa-400;
+}
+
+#userPath {
+	fill: $sasa-400;
+}
+#userPathOne {
+	fill: $sasa-100;
 }

@@ -50,7 +50,11 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 }
-
+@mixin grid-four {
+	gap: 2rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
 
 // Links and Buttons
 @mixin link {
@@ -62,7 +66,7 @@
 	font-size: 1rem;
 	margin: 0.5rem 0;
 	border-width: 0 0 3px;
-  border-color: $sasa-200;
+	border-color: $sasa-200;
 	padding: 0.4rem 0.8rem;
 	background: transparent;
 
@@ -100,7 +104,12 @@
 	letter-spacing: 0.1rem;
 	padding: 0.4rem 0.8rem;
 
-	&:hover {
+	&:hover,
+	&:active {
+		color: $sasa-200;
+		background: $sasa-300;
+	}
+	&:focus {
 		color: $sasa-200;
 		background: $sasa-300;
 	}
@@ -128,6 +137,12 @@
 	background-position: center;
 	background-repeat: no-repeat;
 }
+
+@mixin icons {
+	height: 2rem;
+	width: fit-content;
+}
+
 
 // Media Queries
 

@@ -1,32 +1,79 @@
 #navbar {
   width: 100%;
-  height: 2rem;
+  padding: 1rem;
   display: flex;
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
 }
 
-#navbar .navbrand {
+#navbar .menu {
   height: 100%;
+  gap: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-#navbar .navbrand .logo {
+#navbar .menu .link {
   height: 100%;
-  width: fit-content;
 }
 
 #navbar .link {
   height: 100%;
 }
 
-#navbar .link .user {
-  height: 100%;
+#logo {
+  height: 2rem;
   width: fit-content;
 }
 
-#navbar .link .user .icon {
-  height: 100%;
+#home {
+  height: 2rem;
+  width: fit-content;
+}
+
+#search {
+  height: 2rem;
+  width: fit-content;
+}
+
+#heart {
+  height: 2rem;
+  width: fit-content;
+}
+
+#add {
+  height: 2rem;
+  width: fit-content;
+}
+
+#user {
+  height: 2rem;
+  width: fit-content;
+}
+
+#homePath {
+  fill: #10f9f9;
+}
+
+#searchPath {
+  fill: #FEEA49;
+}
+
+#heartPath {
+  fill: #ff1f93;
+}
+
+#addPath {
+  fill: #8F3FEB;
+}
+
+#userPath {
+  fill: #8F3FEB;
+}
+
+#userPathOne {
+  fill: #FEEA49;
 }
 
 #form .group {
@@ -82,13 +129,18 @@
   outline: none;
   color: #FEEA49;
   cursor: pointer;
-  background: #5915A7;
+  background: #8F3FEB;
   border-radius: 0.2rem;
   letter-spacing: 0.1rem;
   padding: 0.4rem 0.8rem;
 }
 
-#form .btn:hover {
+#form .btn:hover, #form .btn:active {
+  color: #10f9f9;
+  background: #ff1f93;
+}
+
+#form .btn:focus {
   color: #10f9f9;
   background: #ff1f93;
 }

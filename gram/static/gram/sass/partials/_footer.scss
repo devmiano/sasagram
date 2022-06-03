@@ -1,0 +1,34 @@
+#footer {
+	gap: 0.5rem;
+	width: 100%;
+	margin-top: auto;
+	@include grid-three;
+
+	@include for-tab {
+		@include col-center;
+		gap: 0rem;
+	}
+
+	.text {
+		@include text;
+		padding: 1rem;
+		color: $sasa-500;
+		text-align: center;
+
+		@include for-tab {
+			padding: 0.5rem 1rem;
+		}
+	}
+
+	.copy {
+    padding: 1rem;
+		color: $sasa-300;
+		font-size: 1.7rem;
+		@include brandtext;
+		text-align: center;
+
+		@include for-tab {
+			padding: 0.5rem 1rem;
+		}
+	}
+}

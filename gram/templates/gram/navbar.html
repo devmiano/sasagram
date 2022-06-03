@@ -1,5 +1,8 @@
+{% load static %}
 <nav class="navbar">
-	<a href="/">Sasagram</a>
+	<a href="/">
+		<img src="{% static 'gram/icons/logo-text.svg' %}" alt="logo">
+	</a>
 	{% if user.is_authenticated %}
 	<div class="links">
 		<a href="/accounts/password/change">Change Password</a>

@@ -1,3 +1,16 @@
+#app {
+  width: 100%;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+#app #main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 /* // Box sizing and font smoothing rules */
 *,
 *::before,
@@ -99,6 +112,55 @@ input:-webkit-autofill,
 input:-webkit-autofill:focus {
   font: inherit;
   transition: background-color 600000s 0s, color 600000s 0s;
+}
+
+#footer {
+  gap: 0.5rem;
+  width: 100%;
+  margin-top: auto;
+  gap: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  #footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0rem;
+  }
+}
+
+#footer .text {
+  font-size: 1rem;
+  font-weight: 300;
+  font-family: "Outfit", sans-serif;
+  letter-spacing: 0.05rem;
+  padding: 1rem;
+  color: #F25282;
+  text-align: center;
+}
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  #footer .text {
+    padding: 0.5rem 1rem;
+  }
+}
+
+#footer .copy {
+  padding: 1rem;
+  color: #73DBFF;
+  font-size: 1.7rem;
+  font-family: "Grand Hotel", cursive;
+  text-align: center;
+}
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  #footer .copy {
+    padding: 0.5rem 1rem;
+  }
 }
 
 @keyframes frame {

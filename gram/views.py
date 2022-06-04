@@ -67,4 +67,20 @@ def login(request):
     'current_user': current_user,
   }
   
-  return render(request, template, context)
+  if request.method == 'POST':
+    username = request.POST['username']
+    password = request.POST['password']
+    
+    user = auth.authenticate(username=username, password=password)
+    
+    if user is not None:
+      auth.login(request, user)
+      return redirect('index')
+    
+    else:
+      messages.info(request, 'Authentication failed')
+      return redirect('login')
+    
+  else:
+    return render(request, template, context)
+

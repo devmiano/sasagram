@@ -43,7 +43,7 @@
 @mixin grid-two {
 	display: grid;
 	grid-auto-rows: 1fr;
-	grid-template-columns: repeat(2,  minmax(0, 1fr));
+	grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 @mixin grid-three {
 	display: grid;
@@ -53,7 +53,7 @@
 @mixin grid-four {
 	display: grid;
 	grid-auto-rows: 1fr;
-	grid-template-columns: repeat(4,  minmax(0, 1fr));
+	grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 // Links and Buttons

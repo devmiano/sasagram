@@ -241,7 +241,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  border-radius: 0.5rem;
+  border-radius: 0.7rem;
   background-color: #1f1f33;
 }
 
@@ -275,12 +275,12 @@
 
 .card .post {
   width: 100%;
-  text-decoration: none;
   height: 100%;
+  text-decoration: none;
 }
 
 .card .post .image {
-  width: 100%;
+  width: auto;
   height: auto;
   background-size: cover;
   background-repeat: no-repeat;

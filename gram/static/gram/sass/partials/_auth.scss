@@ -35,4 +35,9 @@
 		@include btn;
 		margin-top: 1.5rem;
 	}
+	.btn-alt {
+		width: 100%;
+		@include btn-alt;
+		margin-top: 1.5rem;
+	}
 }

@@ -56,6 +56,12 @@
 	grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+@mixin grid-five {
+	display: grid;
+	grid-auto-rows: 1fr;
+	grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
 // Links and Buttons
 @mixin link {
 	text-decoration: none;
@@ -97,36 +103,46 @@
 	border: none;
 	outline: none;
 	cursor: pointer;
-	color: $ash-100;
+	color: $sasa-100;
+	font-size: 0.8rem;
 	background: $sasa-300;
-	border-radius: 0.5rem;
-	letter-spacing: 0.1rem;
+	border-radius: 0.3rem;
+	letter-spacing: 0.2rem;
 	padding: 0.5rem 0.8rem;
+	text-transform: uppercase;
 
 	&:hover,
 	&:active {
 		color: $sasa-500;
 		background: $sasa-100;
 	}
+
 	&:focus {
 		color: $sasa-200;
 		background: $sasa-300;
 	}
 }
 @mixin btn-alt {
-	color: $sasa-100;
+	border: none;
 	outline: none;
 	cursor: pointer;
+	color: $sasa-100;
 	font-size: 0.8rem;
-	text-decoration: none;
 	padding: 0.7rem 1rem;
+	border-radius: 0.3rem;
 	letter-spacing: 0.2rem;
-	background: transparent;
+	background: $sasa-500;
 	text-transform: uppercase;
-	border: 2px solid $sasa-100;
 
-	&:hover {
+	&:hover,
+	&:active {
+		color: $sasa-500;
 		background: $sasa-100;
+	}
+
+	&:focus {
+		color: $sasa-200;
+		background: $sasa-300;
 	}
 }
 

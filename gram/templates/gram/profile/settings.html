@@ -1,0 +1,36 @@
+{% extends 'gram/base.html' %} {% block content %}
+<main id="main">
+	<section id="main">
+		<div class="forms">
+			<h1 class="title">{{title}}</h1>
+			<form id="form" action="" method="POST">
+				{% csrf_token %}
+				<div class="group">
+					<label class="label" for="bio">Bio</label>
+					<textarea
+						class="input"
+						type="textarea"
+						name="bio"
+						id="bio"
+						autocomplete="off"
+            value="{{user_profile.bio}}"
+					></textarea>
+				</div>
+				<div class="group">
+					<label class="label" for="photo">Photo</label>
+          <img src="{{ user_profile.photo.url }}" alt="profile">
+					<input
+						class="input"
+						type="file"
+						name="photo"
+						id="photo"
+            value="{{user_profile.photo}}"
+					/>
+				</div>
+				<input class="btn" type="submit" value="Save" />
+				<input class="btn-alt" type="submit" value="Cancel" />
+			</form>
+		</div>
+	</section>
+</main>
+{% include 'gram/footer.html' %} {% endblock %}

@@ -10,7 +10,7 @@
 	.menu {
 		gap: 2rem;
 		height: 100%;
-		@include grid-four;
+		@include grid-five;
 
 		.link {
 			height: 100%;
@@ -30,15 +30,20 @@
 	@include icons;
 }
 
-#search {
-	@include icons;
-}
 
 #heart {
 	@include icons;
 }
 
 #add {
+	@include icons;
+}
+
+#search {
+	@include icons;
+}
+
+#settings {
 	@include icons;
 }
 
@@ -50,10 +55,6 @@
 	fill: $sasa-200;
 }
 
-#searchPath {
-	fill: $sasa-100;
-}
-
 #heartPath {
 	fill: $sasa-300;
 }
@@ -62,9 +63,18 @@
 	fill: $sasa-400;
 }
 
+#searchPath {
+	fill: $sasa-100;
+}
+
+#settingsPath {
+	fill: $sasa-200;
+}
+
 #userPath {
 	fill: $sasa-500;
 }
+
 #userPathOne {
 	fill: $sasa-100;
 }

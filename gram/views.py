@@ -6,11 +6,9 @@ from .models import Profile
 def index(request):
   title = 'Share your Story, Saa ni Sasa'
   template = 'gram/index.html'
-  current_user = request.user
   
   context = {
     'title': title,
-    'current_user': current_user,
   }
   
   return render(request, template, context)
@@ -18,11 +16,9 @@ def index(request):
 def join(request):
   title = 'Start your Journey'
   template = 'gram/auth/join.html'
-  current_user = request.user
   
   context = {
     'title': title,
-    'current_user': current_user,
   }
   
   if request.method == 'POST':
@@ -60,11 +56,9 @@ def join(request):
 def login(request):
   title = 'Welcome Back'
   template = 'gram/auth/login.html'
-  current_user = request.user
   
   context = {
     'title': title,
-    'current_user': current_user,
   }
   
   if request.method == 'POST':
@@ -84,3 +78,16 @@ def login(request):
   else:
     return render(request, template, context)
 
+def logout(request):
+  auth.logout(request)
+  return redirect('login')
+
+def profile(request):
+  title = 'Profile'
+  template = 'gram/profile/profile.html'
+  
+  context = {
+    'title': title,
+  }
+  
+  return render(request, template, context)

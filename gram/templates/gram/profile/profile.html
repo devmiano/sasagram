@@ -2,6 +2,8 @@
 <main id="main">
 	<section id="hero">
 		<h1 class="title">{{title}}</h1>
+    <p>Hello, {{user.username}}!</p>
+    	<a class="btn" href="{% url 'logout' %}">Logout</a>
 	</section>
 </main>
 {% include 'gram/footer.html' %} {% endblock %}

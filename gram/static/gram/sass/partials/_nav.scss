@@ -8,7 +8,7 @@
 	@include row-between;
 
 	.menu {
-		gap: 2rem;
+		gap: 1.4rem;
 		height: 100%;
 		@include grid-five;
 
@@ -29,7 +29,6 @@
 #home {
 	@include icons;
 }
-
 
 #heart {
 	@include icons;
@@ -55,20 +54,110 @@
 	fill: $sasa-200;
 }
 
+#homePathOne {
+	fill: none;
+	stroke: none;
+
+	&:hover,
+	&:active {
+		fill: $sasa-200;
+		stroke: $sasa-200;
+		stroke-width: 0.5rem;
+	}
+
+	&:focus {
+		fill: $sasa-200;
+		stroke: $sasa-200;
+		stroke-width: 0.5rem;
+	}
+}
+
 #heartPath {
 	fill: $sasa-300;
+}
+
+#heartPathOne {
+	fill: none;
+	stroke: none;
+
+	&:hover,
+	&:active {
+		fill: $sasa-200;
+		stroke: $sasa-200;
+		stroke-width: 0.5rem;
+	}
+
+	&:focus {
+		fill: $sasa-200;
+		stroke: $sasa-200;
+		stroke-width: 0.5rem;
+	}
 }
 
 #addPath {
 	fill: $sasa-400;
 }
 
+#addPathOne {
+	fill: none;
+	stroke: none;
+
+	&:hover,
+	&:active {
+		fill: $sasa-200;
+		stroke: $sasa-200;
+		stroke-width: 0.5rem;
+	}
+
+	&:focus {
+		fill: $sasa-200;
+		stroke: $sasa-200;
+		stroke-width: 0.5rem;
+	}
+}
+
 #searchPath {
 	fill: $sasa-100;
 }
 
+#searchPathOne {
+	fill: none;
+	stroke: none;
+
+	&:hover,
+	&:active {
+		fill: $sasa-200;
+		stroke: $sasa-200;
+		stroke-width: 0.5rem;
+	}
+
+	&:focus {
+		fill: $sasa-200;
+		stroke: $sasa-200;
+		stroke-width: 0.5rem;
+	}
+}
+
 #settingsPath {
 	fill: $sasa-200;
+}
+
+#settingsPathOne {
+	fill: none;
+	stroke: none;
+
+	&:hover,
+	&:active {
+		fill: $sasa-200;
+		stroke: $sasa-200;
+		stroke-width: 0.5rem;
+	}
+
+	&:focus {
+		fill: $sasa-200;
+		stroke: $sasa-200;
+		stroke-width: 0.5rem;
+	}
 }
 
 #userPath {
@@ -76,7 +165,21 @@
 }
 
 #userPathOne {
-	fill: $sasa-100;
+	fill: none;
+	stroke: none;
+
+	&:hover,
+	&:active {
+		fill: $sasa-200;
+		stroke: $sasa-200;
+		stroke-width: 0.5rem;
+	}
+
+	&:focus {
+		fill: $sasa-200;
+		stroke: $sasa-200;
+		stroke-width: 0.5rem;
+	}
 }
 
 #topbar {

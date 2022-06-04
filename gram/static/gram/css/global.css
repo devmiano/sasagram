@@ -8,7 +8,7 @@
 }
 
 #navbar .menu {
-  gap: 2rem;
+  gap: 1.4rem;
   height: 100%;
   display: grid;
   grid-auto-rows: 1fr;
@@ -24,66 +24,164 @@
 }
 
 #logo {
-  height: 1.3rem;
+  height: 2.4rem;
   width: fit-content;
 }
 
 #home {
-  height: 1.3rem;
+  height: 2.4rem;
   width: fit-content;
 }
 
 #heart {
-  height: 1.3rem;
+  height: 2.4rem;
   width: fit-content;
 }
 
 #add {
-  height: 1.3rem;
+  height: 2.4rem;
   width: fit-content;
 }
 
 #search {
-  height: 1.3rem;
+  height: 2.4rem;
   width: fit-content;
 }
 
 #settings {
-  height: 1.3rem;
+  height: 2.4rem;
   width: fit-content;
 }
 
 #user {
-  height: 1.3rem;
+  height: 2.4rem;
   width: fit-content;
 }
 
 #homePath {
-  fill: #10f9f9;
+  fill: #12ECF8;
+}
+
+#homePathOne {
+  fill: none;
+  stroke: none;
+}
+
+#homePathOne:hover, #homePathOne:active {
+  fill: #12ECF8;
+  stroke: #12ECF8;
+  stroke-width: 0.5rem;
+}
+
+#homePathOne:focus {
+  fill: #12ECF8;
+  stroke: #12ECF8;
+  stroke-width: 0.5rem;
 }
 
 #heartPath {
-  fill: #ff1f93;
+  fill: #FF337A;
+}
+
+#heartPathOne {
+  fill: none;
+  stroke: none;
+}
+
+#heartPathOne:hover, #heartPathOne:active {
+  fill: #12ECF8;
+  stroke: #12ECF8;
+  stroke-width: 0.5rem;
+}
+
+#heartPathOne:focus {
+  fill: #12ECF8;
+  stroke: #12ECF8;
+  stroke-width: 0.5rem;
 }
 
 #addPath {
-  fill: #8F3FEB;
+  fill: #6320EE;
+}
+
+#addPathOne {
+  fill: none;
+  stroke: none;
+}
+
+#addPathOne:hover, #addPathOne:active {
+  fill: #12ECF8;
+  stroke: #12ECF8;
+  stroke-width: 0.5rem;
+}
+
+#addPathOne:focus {
+  fill: #12ECF8;
+  stroke: #12ECF8;
+  stroke-width: 0.5rem;
 }
 
 #searchPath {
-  fill: #FEEA49;
+  fill: #CEFF1A;
+}
+
+#searchPathOne {
+  fill: none;
+  stroke: none;
+}
+
+#searchPathOne:hover, #searchPathOne:active {
+  fill: #12ECF8;
+  stroke: #12ECF8;
+  stroke-width: 0.5rem;
+}
+
+#searchPathOne:focus {
+  fill: #12ECF8;
+  stroke: #12ECF8;
+  stroke-width: 0.5rem;
 }
 
 #settingsPath {
-  fill: #10f9f9;
+  fill: #12ECF8;
+}
+
+#settingsPathOne {
+  fill: none;
+  stroke: none;
+}
+
+#settingsPathOne:hover, #settingsPathOne:active {
+  fill: #12ECF8;
+  stroke: #12ECF8;
+  stroke-width: 0.5rem;
+}
+
+#settingsPathOne:focus {
+  fill: #12ECF8;
+  stroke: #12ECF8;
+  stroke-width: 0.5rem;
 }
 
 #userPath {
-  fill: #5915A7;
+  fill: #6320EE;
 }
 
 #userPathOne {
-  fill: #FEEA49;
+  fill: none;
+  stroke: none;
+}
+
+#userPathOne:hover, #userPathOne:active {
+  fill: #12ECF8;
+  stroke: #12ECF8;
+  stroke-width: 0.5rem;
+}
+
+#userPathOne:focus {
+  fill: #12ECF8;
+  stroke: #12ECF8;
+  stroke-width: 0.5rem;
 }
 
 #topbar {
@@ -93,12 +191,12 @@
 #topbar .btn {
   float: right;
   text-decoration: none;
-  color: #10f9f9;
+  color: #12ECF8;
   margin: 0 0.5rem;
 }
 
 #topbar .btn:hover, #topbar .btn:active {
-  color: #FEEA49;
+  color: #CEFF1A;
 }
 
 .forms {
@@ -128,40 +226,40 @@
   font-size: 0.84rem;
   font-family: "Outfit", sans-serif;
   letter-spacing: 0.05rem;
-  color: #b3b3d0;
+  color: #8155F1;
 }
 
 #form .group .input {
   width: 100%;
   outline: none;
-  color: #10f9f9;
+  color: #12ECF8;
   font-size: 1rem;
   padding: 0.5rem 0;
   border-width: 0 0 3px;
-  border-color: #5915A7;
+  border-color: #6320EE;
   background: transparent;
 }
 
 #form .group .input::placeholder {
-  color: #10f9f9;
+  color: #12ECF8;
   background: transparent;
 }
 
 #form .group .input:focus {
-  color: #10f9f9;
-  border-color: #FEEA49;
+  color: #12ECF8;
+  border-color: #CEFF1A;
   background: transparent;
 }
 
 #form .group .input:active {
-  color: #10f9f9;
-  border-color: #FEEA49;
+  color: #12ECF8;
+  border-color: #CEFF1A;
   background: transparent;
 }
 
 #form .group .input:focus-visible {
-  color: #10f9f9;
-  border-color: #FEEA49;
+  color: #12ECF8;
+  border-color: #CEFF1A;
   background: transparent;
 }
 
@@ -193,40 +291,40 @@
   font-size: 0.84rem;
   font-family: "Outfit", sans-serif;
   letter-spacing: 0.05rem;
-  color: #b3b3d0;
+  color: #8155F1;
 }
 
 #form .container .group .input {
   width: 100%;
   outline: none;
-  color: #10f9f9;
+  color: #12ECF8;
   font-size: 1rem;
   padding: 0.5rem 0;
   border-width: 0 0 3px;
-  border-color: #5915A7;
+  border-color: #6320EE;
   background: transparent;
 }
 
 #form .container .group .input::placeholder {
-  color: #10f9f9;
+  color: #12ECF8;
   background: transparent;
 }
 
 #form .container .group .input:focus {
-  color: #10f9f9;
-  border-color: #FEEA49;
+  color: #12ECF8;
+  border-color: #CEFF1A;
   background: transparent;
 }
 
 #form .container .group .input:active {
-  color: #10f9f9;
-  border-color: #FEEA49;
+  color: #12ECF8;
+  border-color: #CEFF1A;
   background: transparent;
 }
 
 #form .container .group .input:focus-visible {
-  color: #10f9f9;
-  border-color: #FEEA49;
+  color: #12ECF8;
+  border-color: #CEFF1A;
   background: transparent;
 }
 
@@ -236,10 +334,10 @@
   outline: none;
   cursor: pointer;
   font-weight: 500;
-  color: #1f1f33;
+  color: #140439;
   font-size: 0.8rem;
   padding: 0.7rem 1rem;
-  background: #FEEA49;
+  background: #CEFF1A;
   border-radius: 0.3rem;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
@@ -247,13 +345,13 @@
 }
 
 #form .btn:hover, #form .btn:active {
-  color: #5915A7;
-  background: #10f9f9;
+  color: #6320EE;
+  background: #12ECF8;
 }
 
 #form .btn:focus {
-  color: #10f9f9;
-  background: #ff1f93;
+  color: #12ECF8;
+  background: #FF337A;
 }
 
 #form .cta {
@@ -270,23 +368,23 @@
   outline: none;
   cursor: pointer;
   font-weight: 500;
-  color: #1f1f33;
+  color: #140439;
   font-size: 0.8rem;
   padding: 0.7rem 1rem;
-  background: #FEEA49;
+  background: #CEFF1A;
   border-radius: 0.3rem;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
 }
 
 #form .cta .btn-submit:hover, #form .cta .btn-submit:active {
-  color: #5915A7;
-  background: #10f9f9;
+  color: #6320EE;
+  background: #12ECF8;
 }
 
 #form .cta .btn-submit:focus {
-  color: #10f9f9;
-  background: #ff1f93;
+  color: #12ECF8;
+  background: #FF337A;
 }
 
 #form .cta .btn-link {
@@ -296,10 +394,10 @@
   outline: none;
   cursor: pointer;
   font-weight: 500;
-  color: #FEEA49;
+  color: #CEFF1A;
   font-size: 0.8rem;
   border-radius: 0.3rem;
-  background: #5915A7;
+  background: #6320EE;
   letter-spacing: 0.2rem;
   padding: 0.7rem 1rem;
   text-transform: uppercase;
@@ -307,13 +405,13 @@
 }
 
 #form .cta .btn-link:hover, #form .cta .btn-link:active {
-  color: #1f1f33;
-  background: #ff1f93;
+  color: #140439;
+  background: #FF337A;
 }
 
 #form .cta .btn-link:focus {
-  color: #5915A7;
-  background: #ff1f93;
+  color: #6320EE;
+  background: #FF337A;
 }
 
 #app {
@@ -343,7 +441,7 @@
   font-size: 2rem;
   font-family: "Outfit", sans-serif;
   letter-spacing: 0.1rem;
-  color: #FEEA49;
+  color: #CEFF1A;
 }
 
 #grid {
@@ -396,7 +494,7 @@
   align-items: flex-start;
   justify-content: center;
   border-radius: 0.7rem;
-  background-color: #1f1f33;
+  background-color: #140439;
 }
 
 .card .user {
@@ -424,7 +522,7 @@
   font-size: 0.84rem;
   font-family: "Outfit", sans-serif;
   letter-spacing: 0.05rem;
-  color: #10f9f9;
+  color: #12ECF8;
 }
 
 .card .post {
@@ -492,7 +590,7 @@
   font-size: 0.84rem;
   font-family: "Outfit", sans-serif;
   letter-spacing: 0.05rem;
-  color: #d9d9e8;
+  color: #D5C6FA;
   font-size: 0.75rem;
 }
 
@@ -501,7 +599,7 @@
   font-size: 0.84rem;
   font-family: "Outfit", sans-serif;
   letter-spacing: 0.05rem;
-  color: #f2f2f7;
+  color: #F1ECFD;
   font-weight: 400;
 }
 
@@ -510,7 +608,7 @@
   font-size: 0.84rem;
   font-family: "Outfit", sans-serif;
   letter-spacing: 0.05rem;
-  color: #f2f2f7;
+  color: #F1ECFD;
   font-weight: 400;
   font-size: 0.9rem;
 }
@@ -520,7 +618,7 @@
   font-size: 0.84rem;
   font-family: "Outfit", sans-serif;
   letter-spacing: 0.05rem;
-  color: #b3b3d0;
+  color: #8155F1;
   font-size: 0.75rem;
 }
 
@@ -566,10 +664,10 @@ html:focus-within {
 /* // Set core body defaults */
 body {
   line-height: 1.5;
-  color: #e6e6ef;
+  color: #D5C6FA;
   font-weight: 300;
   font-family: "Outfit", sans-serif;
-  background-color: #0F0F1A;
+  background-color: #0D0326;
   text-rendering: optimizeSpeed;
 }
 
@@ -614,16 +712,16 @@ select {
 }
 
 ::-webkit-scrollbar-track {
-  background: #1f1f33;
+  background: #140439;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #ff1f93;
+  background: #FF337A;
   margin: 0.2rem;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #10f9f9;
+  background: #12ECF8;
 }
 
 input:-webkit-autofill,
@@ -657,7 +755,7 @@ input:-webkit-autofill:focus {
   font-size: 0.84rem;
   font-family: "Outfit", sans-serif;
   letter-spacing: 0.05rem;
-  color: #ff1f93;
+  color: #FF337A;
   text-align: left;
 }
 
@@ -672,7 +770,7 @@ input:-webkit-autofill:focus {
   font-size: 0.84rem;
   font-family: "Outfit", sans-serif;
   letter-spacing: 0.05rem;
-  color: #10f9f9;
+  color: #12ECF8;
   text-align: center;
 }
 
@@ -695,7 +793,7 @@ input:-webkit-autofill:focus {
   font-size: 0.84rem;
   font-family: "Outfit", sans-serif;
   letter-spacing: 0.05rem;
-  color: #FEEA49;
+  color: #CEFF1A;
   text-align: right;
 }
 

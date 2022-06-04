@@ -35,3 +35,14 @@
 		@include grid-two;
 	}
 }
+
+#messages {
+	@include col-start;
+
+	.message {
+		color: $error;
+		@include small;
+		font-weight: 400;
+		font-size: 0.9rem;
+	}
+}

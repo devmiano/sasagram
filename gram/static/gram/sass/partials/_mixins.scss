@@ -82,19 +82,19 @@
 
 	&:focus {
 		color: $sasa-200;
-		border-color: $sasa-300;
+		border-color: $sasa-100;
 		background: transparent;
 	}
 
 	&:active {
 		color: $sasa-200;
-		border-color: $sasa-300;
+		border-color: $sasa-100;
 		background: transparent;
 	}
 
 	&:focus-visible {
 		color: $sasa-200;
-		border-color: $sasa-300;
+		border-color: $sasa-100;
 		background: transparent;
 	}
 }
@@ -103,18 +103,20 @@
 	border: none;
 	outline: none;
 	cursor: pointer;
-	color: $sasa-100;
+	font-weight: 500;
+	color: $dark-500;
 	font-size: 0.8rem;
-	background: $sasa-300;
+	padding: 0.7rem 1rem;
+	background: $sasa-100;
 	border-radius: 0.3rem;
 	letter-spacing: 0.2rem;
-	padding: 0.5rem 0.8rem;
 	text-transform: uppercase;
+	
 
 	&:hover,
 	&:active {
 		color: $sasa-500;
-		background: $sasa-100;
+		background: $sasa-200;
 	}
 
 	&:focus {
@@ -126,22 +128,23 @@
 	border: none;
 	outline: none;
 	cursor: pointer;
+	font-weight: 500;
 	color: $sasa-100;
 	font-size: 0.8rem;
-	padding: 0.7rem 1rem;
 	border-radius: 0.3rem;
-	letter-spacing: 0.2rem;
 	background: $sasa-500;
+	letter-spacing: 0.2rem;
+	padding: 0.7rem 1rem;
 	text-transform: uppercase;
 
 	&:hover,
 	&:active {
-		color: $sasa-500;
-		background: $sasa-100;
+		color: $dark-500;
+		background: $sasa-300;
 	}
 
 	&:focus {
-		color: $sasa-200;
+		color: $sasa-500;
 		background: $sasa-300;
 	}
 }

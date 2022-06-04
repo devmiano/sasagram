@@ -30,14 +30,55 @@
 		}
 	}
 
+	.container {
+		gap: 1rem;
+		@include grid-two;
+		align-items: flex-start;
+
+		.group {
+			width: 100%;
+			margin: 0.7rem 0;
+			@include col-start;
+
+			.photo {
+				width: 240px;
+				height: 240px;
+				margin: 0.7rem 0;
+			}
+
+			.label {
+				@include small;
+				color: $ash-500;
+			}
+
+			.input {
+				width: 100%;
+				@include input;
+			}
+		}
+	}
+
 	.btn {
 		width: 100%;
 		@include btn;
 		margin-top: 1.5rem;
 	}
-	.btn-alt {
-		width: 100%;
-		@include btn-alt;
+
+	.cta {
+		gap: 1rem;
+		@include grid-two;
 		margin-top: 1.5rem;
+
+		.btn-submit {
+			width: 100%;
+			@include btn;
+		}
+
+		.btn-link {
+			width: 100%;
+			@include link;
+			@include btn-alt;
+			text-align: center;
+		}
 	}
 }

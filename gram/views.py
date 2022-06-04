@@ -106,14 +106,26 @@ def settings(request):
   user_profile = Profile.objects.get(user=request.user)
   
   if request.method == 'POST':
-    photo = request.POST['photo']
-    bio = request.POST['bio']
+    if request.FILES.get('photo') == None:
+      photo = user_profile.photo
+      bio = request.POST['bio']
+      
+      user_profile.photo = photo
+      user_profile.bio = bio
+      user_profile.save()
+      
+    if request.FILES.get('photo') != None:
+      photo = request.FILES.get('photo')
+      bio = request.POST['bio']
+      
+      user_profile.photo = photo
+      user_profile.bio = bio
+      user_profile.save()
+
+    return redirect('settings')
   
   context = {
     'title': title,
     'user_profile': user_profile,
   }
-  
-  
-  
   return render(request, template, context)

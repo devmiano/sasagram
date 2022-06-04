@@ -1,0 +1,94 @@
+@import 'type';
+@import 'mixins';
+@import 'palette';
+
+.card {
+	@include col-start;
+  border-radius: 0.8rem;
+	background-color: $dark-500;
+
+	.user {
+		gap: 0.4rem;
+		@include link;
+		@include row-start;
+		align-items: center;
+		padding: 0.7rem 0.7rem 0.1rem 0.7rem;
+
+		.prof {
+			height: 2rem;
+			@include image;
+			border-radius: 4rem;
+		}
+
+		.name {
+			@include small;
+			color: $sasa-200;
+		}
+	}
+
+	.post {
+		@include link;
+
+		.image {
+			@include image;
+			margin: 0.7rem;
+			border-radius: 0.5rem;
+		}
+	}
+
+	.footer {
+		width: 100%;
+		padding: 0.2rem 0.7rem 0.1rem 0.7rem;
+		@include row-between;
+
+		.left {
+			gap: 0.7rem;
+			@include row-start;
+
+			.link {
+				@include link;
+
+				.icon {
+					height: 1rem;
+				}
+			}
+		}
+
+		.link {
+			@include link;
+
+			.icon {
+				height: 1rem;
+			}
+		}
+	}
+
+	.content {
+		padding: 0.2rem 0.7rem 1rem 0.7rem;
+		@include col-start;
+
+		.likes {
+			@include small;
+			color: $ash-300;
+
+			.like {
+				@include small;
+				color: $ash-100;
+				font-weight: 400;
+			}
+		}
+
+		.caption {
+			@include small;
+			color: $ash-100;
+			font-weight: 400;
+			font-size: 0.95rem;
+		}
+
+		.date {
+			@include small;
+			color: $ash-500;
+			font-size: 0.75rem;
+		}
+	}
+}

@@ -202,10 +202,135 @@
   margin: 1rem 0;
   line-height: 1;
   font-weight: 500;
-  font-size: 3.2rem;
+  font-size: 2rem;
   font-family: "Outfit", sans-serif;
   letter-spacing: 0.1rem;
   color: #FEEA49;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  border-radius: 0.8rem;
+  background-color: #1f1f33;
+}
+
+.card .user {
+  gap: 0.4rem;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.7rem 0.7rem 0.1rem 0.7rem;
+}
+
+.card .user .prof {
+  height: 2rem;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 4rem;
+}
+
+.card .user .name {
+  font-weight: 200;
+  font-size: 0.84rem;
+  font-family: "Outfit", sans-serif;
+  letter-spacing: 0.05rem;
+  color: #10f9f9;
+}
+
+.card .post {
+  text-decoration: none;
+}
+
+.card .post .image {
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0.7rem;
+  border-radius: 0.5rem;
+}
+
+.card .footer {
+  width: 100%;
+  padding: 0.2rem 0.7rem 0.1rem 0.7rem;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card .footer .left {
+  gap: 0.7rem;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.card .footer .left .link {
+  text-decoration: none;
+}
+
+.card .footer .left .link .icon {
+  height: 1rem;
+}
+
+.card .footer .link {
+  text-decoration: none;
+}
+
+.card .footer .link .icon {
+  height: 1rem;
+}
+
+.card .content {
+  padding: 0.2rem 0.7rem 1rem 0.7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.card .content .likes {
+  font-weight: 200;
+  font-size: 0.84rem;
+  font-family: "Outfit", sans-serif;
+  letter-spacing: 0.05rem;
+  color: #d9d9e8;
+}
+
+.card .content .likes .like {
+  font-weight: 200;
+  font-size: 0.84rem;
+  font-family: "Outfit", sans-serif;
+  letter-spacing: 0.05rem;
+  color: #f2f2f7;
+  font-weight: 400;
+}
+
+.card .content .caption {
+  font-weight: 200;
+  font-size: 0.84rem;
+  font-family: "Outfit", sans-serif;
+  letter-spacing: 0.05rem;
+  color: #f2f2f7;
+  font-weight: 400;
+  font-size: 0.95rem;
+}
+
+.card .content .date {
+  font-weight: 200;
+  font-size: 0.84rem;
+  font-family: "Outfit", sans-serif;
+  letter-spacing: 0.05rem;
+  color: #b3b3d0;
+  font-size: 0.75rem;
 }
 
 #hero {

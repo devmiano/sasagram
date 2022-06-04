@@ -21,7 +21,7 @@
 
 		.label {
 			@include small;
-			color: $ash-500;
+			color: $ash-200;
 		}
 
 		.input {
@@ -34,6 +34,26 @@
 		gap: 1rem;
 		@include grid-two;
 		align-items: flex-start;
+
+		.groups {
+			@include col-start;
+
+			.group {
+				width: 100%;
+				margin: 0.7rem 0;
+				@include col-start;
+
+				.label {
+					@include small;
+					color: $ash-200;
+				}
+
+				.input {
+					width: 100%;
+					@include input;
+				}
+			}
+		}
 
 		.group {
 			width: 100%;
@@ -48,7 +68,7 @@
 
 			.label {
 				@include small;
-				color: $ash-500;
+				color: $ash-200;
 			}
 
 			.input {

@@ -3,9 +3,11 @@
 	{% include 'gram/navbar.html' %}
 	<section id="hero">
 		<h1 class="title">Feed</h1>
-		<div id="grid">
-				{% include 'gram/base/card.html' %}
-		</div>
+		{% if feed %}
+		<div id="grid">{% include 'gram/base/card.html' with grams=feed %}</div>
+		{% else %}
+		<p>Feed currently unavailable</p>
+		{% endif %}
 	</section>
 </main>
 {% include 'gram/footer.html' %} {% endblock %}

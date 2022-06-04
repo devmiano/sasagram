@@ -19,8 +19,27 @@
   height: 100%;
 }
 
+#navbar .menu .link .photo {
+  width: 4rem;
+  height: 4rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
 #navbar .link {
   height: 100%;
+}
+
+#navbar .link .photo {
+  width: 2rem;
+  height: 2rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  border-radius: 3rem;
 }
 
 #logo {
@@ -106,13 +125,12 @@
 
 #addPathOne {
   fill: none;
-  stroke: none;
+  stroke: #340C97;
+  stroke-width: 0.8rem;
 }
 
 #addPathOne:hover, #addPathOne:active {
   fill: #12ECF8;
-  stroke: #12ECF8;
-  stroke-width: 0.5rem;
 }
 
 #addPathOne:focus {
@@ -226,7 +244,7 @@
   font-size: 0.84rem;
   font-family: "Outfit", sans-serif;
   letter-spacing: 0.05rem;
-  color: #8155F1;
+  color: #D5C6FA;
 }
 
 #form .group .input {
@@ -271,6 +289,64 @@
   align-items: flex-start;
 }
 
+#form .container .groups {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#form .container .groups .group {
+  width: 100%;
+  margin: 0.7rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#form .container .groups .group .label {
+  font-weight: 200;
+  font-size: 0.84rem;
+  font-family: "Outfit", sans-serif;
+  letter-spacing: 0.05rem;
+  color: #D5C6FA;
+}
+
+#form .container .groups .group .input {
+  width: 100%;
+  outline: none;
+  color: #12ECF8;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  border-width: 0 0 3px;
+  border-color: #6320EE;
+  background: transparent;
+}
+
+#form .container .groups .group .input::placeholder {
+  color: #12ECF8;
+  background: transparent;
+}
+
+#form .container .groups .group .input:focus {
+  color: #12ECF8;
+  border-color: #CEFF1A;
+  background: transparent;
+}
+
+#form .container .groups .group .input:active {
+  color: #12ECF8;
+  border-color: #CEFF1A;
+  background: transparent;
+}
+
+#form .container .groups .group .input:focus-visible {
+  color: #12ECF8;
+  border-color: #CEFF1A;
+  background: transparent;
+}
+
 #form .container .group {
   width: 100%;
   margin: 0.7rem 0;
@@ -291,7 +367,7 @@
   font-size: 0.84rem;
   font-family: "Outfit", sans-serif;
   letter-spacing: 0.05rem;
-  color: #8155F1;
+  color: #D5C6FA;
 }
 
 #form .container .group .input {
@@ -505,16 +581,17 @@
   align-items: flex-start;
   justify-content: flex-start;
   align-items: center;
-  padding: 0.7rem 0.7rem 0.1rem 0.7rem;
+  padding: 0.7rem 0.7rem 0.3rem 0.7rem;
 }
 
 .card .user .prof {
+  width: 2rem;
   height: 2rem;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
-  border-radius: 4rem;
+  border-radius: 7rem;
 }
 
 .card .user .name {
@@ -582,7 +659,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding: 0.2rem 0.7rem 1rem 0.7rem;
+  padding: 0.3rem 0.7rem 0.5rem 0.7rem;
 }
 
 .card .content .likes {
@@ -609,7 +686,7 @@
   font-family: "Outfit", sans-serif;
   letter-spacing: 0.05rem;
   color: #F1ECFD;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 0.9rem;
 }
 
@@ -618,8 +695,9 @@
   font-size: 0.84rem;
   font-family: "Outfit", sans-serif;
   letter-spacing: 0.05rem;
-  color: #8155F1;
-  font-size: 0.75rem;
+  color: #9D7BF4;
+  font-size: 0.8rem;
+  padding-top: 0.5rem;
 }
 
 #hero {

@@ -14,11 +14,24 @@
 
 		.link {
 			height: 100%;
+
+			.photo {
+				width: 4rem;
+				height: 4rem;
+				@include image;
+			}
 		}
 	}
 
 	.link {
 		height: 100%;
+
+		.photo {
+			width: 2rem;
+			height: 2rem;
+			@include image;
+			border-radius: 3rem;
+		}
 	}
 }
 
@@ -100,13 +113,12 @@
 
 #addPathOne {
 	fill: none;
-	stroke: none;
+	stroke: $dark-200;
+	stroke-width: 0.8rem;
 
 	&:hover,
 	&:active {
 		fill: $sasa-200;
-		stroke: $sasa-200;
-		stroke-width: 0.5rem;
 	}
 
 	&:focus {

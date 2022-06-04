@@ -4,14 +4,19 @@ from django.contrib import messages
 from django.contrib.auth.models import User, auth
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_list_or_404, get_object_or_404, redirect, render
-from .models import Profile
+from .models import Gram, Profile
 
 def index(request):
   title = 'Share your Story, Saa ni Sasa'
   template = 'gram/index.html'
+  user_object = User.objects.get(username=request.user.username)
+  user_profile = Profile.objects.get(user=user_object)
+  feed = Gram.objects.order_by('-posted').all()
   
   context = {
+    'feed': feed,
     'title': title,
+    'user_profile': user_profile,
   }
   
   return render(request, template, context)
@@ -130,4 +135,28 @@ def settings(request):
     'title': title,
     'user_profile': user_profile,
   }
+  return render(request, template, context)
+
+@login_required(login_url='login')
+def create(request):
+  user_profile = Profile.objects.get(user=request.user)
+  if request.method == 'POST':
+    user = request.user.username
+    photo = request.FILES.get('photo')
+    title = request.POST['title']
+    caption = request.POST['caption']
+    profile = user_profile
+    
+    new_gram = Gram.objects.create(title=title, caption=caption, user=user, photo=photo, profile=profile)
+    new_gram.save()
+    
+    return redirect('index')
+  
+  else:
+    template = 'gram/profile/create.html'
+    title = 'Create a new Post'
+    context = {
+      'title': title,
+    }
+  
   return render(request, template, context)

@@ -35,25 +35,25 @@
 }
 
 @mixin grid-one {
-	gap: 1rem;
 	display: grid;
+	grid-auto-rows: 1fr;
 	grid-template-columns: 1fr;
 }
 
 @mixin grid-two {
-	gap: 1rem;
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-auto-rows: 1fr;
+	grid-template-columns: repeat(2,  minmax(0, 1fr));
 }
 @mixin grid-three {
-	gap: 1rem;
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-auto-rows: 1fr;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 @mixin grid-four {
-	gap: 2rem;
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-auto-rows: 1fr;
+	grid-template-columns: repeat(4,  minmax(0, 1fr));
 }
 
 // Links and Buttons
@@ -132,9 +132,10 @@
 
 // Image
 @mixin image {
-	background-size: 100%;
-	background-position: center;
+	background-size: cover;
 	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center center;
 }
 
 @mixin icons {
@@ -144,16 +145,23 @@
 
 // Media Queries
 
+// Phone
+@mixin for-phone {
+	@media screen and (min-width: 0px) and(max-width: 600px) {
+		@content;
+	}
+}
+
 // Tablet
 @mixin for-tab {
-	@media screen and (min-width: 0px) and(max-width: 768px) {
+	@media screen and (min-width: 601px) and(max-width: 1000px) {
 		@content;
 	}
 }
 
 // Desktop
 @mixin for-desktop {
-	@media screen and (min-width: 769px) and (max-width: 4000px) {
+	@media screen and (min-width: 1001px) and (max-width: 4000px) {
 		@content;
 	}
 }

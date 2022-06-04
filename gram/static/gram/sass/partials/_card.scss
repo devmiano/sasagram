@@ -3,8 +3,10 @@
 @import 'palette';
 
 .card {
+	width: 100%;
+	height: 100%;
 	@include col-start;
-  border-radius: 0.8rem;
+	border-radius: 0.5rem;
 	background-color: $dark-500;
 
 	.user {
@@ -27,12 +29,19 @@
 	}
 
 	.post {
+    width: 100%;
 		@include link;
+		height: 100%;
 
 		.image {
+			width: 100%;
+			height: auto;
 			@include image;
-			margin: 0.7rem;
-			border-radius: 0.5rem;
+			overflow: hidden;
+			padding: 0.32rem;
+      object-fit: contain;
+			border-radius: 0.7rem;
+			
 		}
 	}
 
@@ -64,12 +73,13 @@
 	}
 
 	.content {
-		padding: 0.2rem 0.7rem 1rem 0.7rem;
 		@include col-start;
+		padding: 0.2rem 0.7rem 1rem 0.7rem;
 
 		.likes {
 			@include small;
 			color: $ash-300;
+			font-size: 0.75rem;
 
 			.like {
 				@include small;
@@ -82,7 +92,7 @@
 			@include small;
 			color: $ash-100;
 			font-weight: 400;
-			font-size: 0.95rem;
+			font-size: 0.9rem;
 		}
 
 		.date {

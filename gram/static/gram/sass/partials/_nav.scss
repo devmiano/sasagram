@@ -8,6 +8,7 @@
 	@include row-between;
 
 	.menu {
+		gap: 2rem;
 		height: 100%;
 		@include grid-four;
 

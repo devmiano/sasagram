@@ -117,7 +117,7 @@ def profile(request, pk):
 
 
 @login_required(login_url='login')
-def settings(request, pk):
+def settings(request):
   title = f'Update Profile'
   template = 'gram/profile/settings.html'
   user_profile = Profile.objects.get(user=request.user)

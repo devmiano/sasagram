@@ -35,13 +35,13 @@
 
 			.username {
 				@include subtext;
-				color: $sasa-200;
+				color: $sasa-300;
 				margin-top: -0.8rem;
 			}
 
 			.bio {
 				@include text;
-				color: $ash-100;
+				color: $sasa-200;
 				margin: 0.8rem 0;
 			}
 		}

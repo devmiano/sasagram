@@ -659,7 +659,7 @@
   font-size: 0.84rem;
   font-family: "Outfit", sans-serif;
   letter-spacing: 0.05rem;
-  color: #12ECF8;
+  color: #CEFF1A;
 }
 
 .card .user .link {
@@ -1015,7 +1015,7 @@ input:-webkit-autofill:focus {
   font-size: 1.3rem;
   font-family: "Outfit", sans-serif;
   letter-spacing: 0.05rem;
-  color: #12ECF8;
+  color: #FF337A;
   margin-top: -0.8rem;
 }
 
@@ -1024,7 +1024,7 @@ input:-webkit-autofill:focus {
   font-weight: 300;
   font-family: "Outfit", sans-serif;
   letter-spacing: 0.05rem;
-  color: #F1ECFD;
+  color: #12ECF8;
   margin: 0.8rem 0;
 }
 

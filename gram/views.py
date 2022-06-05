@@ -1,4 +1,3 @@
-import uuid
 from datetime import datetime
 from django.contrib import messages
 from django.contrib.auth.models import User, auth
@@ -9,8 +8,8 @@ from .models import Gram, Like, Profile
 def index(request):
   title = 'Share your Story, Saa ni Sasa'
   template = 'gram/index.html'
-  user_object = User.objects.get(username=request.user.username)
-  user_profile = Profile.objects.get(user=user_object)
+  user_object = User.objects.filter(username=request.user.username).first()
+  user_profile = Profile.objects.filter(user=user_object).first()
   feed = Gram.objects.order_by('-posted').all()
   
   
@@ -23,7 +22,7 @@ def index(request):
   return render(request, template, context)
 
 def join(request):
-  title = 'Start your Journey'
+  title = 'Get Started'
   template = 'gram/auth/join.html'
   
   context = {
@@ -67,7 +66,7 @@ def join(request):
 
 
 def login(request):
-  title = 'Welcome Back'
+  title = 'Welcome'
   template = 'gram/auth/login.html'
   
   context = {
@@ -109,7 +108,8 @@ def profile(request, pk):
 
 
 @login_required(login_url='login')
-def settings(request):
+def settings(request, pk):
+  title = f'Update Profile'
   template = 'gram/profile/settings.html'
   user_profile = Profile.objects.get(user=request.user)
   
@@ -141,9 +141,8 @@ def settings(request):
       user_profile.bio = bio
       user_profile.save()
       
-    return redirect('settings')
+    return redirect('index')
 
-  title = f'Update Profile {user_profile.firstname}'
   context = {
     'title': title,
     'user_profile': user_profile,
@@ -152,7 +151,7 @@ def settings(request):
 
 
 @login_required(login_url='login')
-def create(request):
+def create(request, pk):
   user_profile = Profile.objects.get(user=request.user)
   if request.method == 'POST':
     user = request.user.username
@@ -169,9 +168,11 @@ def create(request):
   else:
     template = 'gram/profile/create.html'
     title = 'Create a new Post'
-    context = {
-      'title': title,
-    }
+    
+  
+  context = {
+    'title': title,
+  }
   
   return render(request, template, context)
 

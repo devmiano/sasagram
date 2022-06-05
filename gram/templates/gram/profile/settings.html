@@ -1,7 +1,11 @@
 {% extends 'gram/base.html' %} {% block content %}
 <main id="main">
 	<div class="forms">
-		<h1 class="title">{{title}}</h1>
+		{% if user_profile.firstname %}
+		<h1 class="title">{{title}} {{user_profile.firstname}}</h1>
+		{% else %}
+		<h1 class="title">{{title}} to get started</h1>
+		{% endif %}
 		<form id="form" action="" method="POST" enctype="multipart/form-data">
 			{% csrf_token %}
 			<div class="container">
@@ -19,7 +23,7 @@
 				<div class="groups">
 					<div class="group">
 						<label class="label" for="firstname">Enter First Name</label>
-						<input class="input" type="text" id="firstname" name="firstname" value="{{user_profile.firstname}}" />
+						<input class="input" type="text" id="firstname" name="firstname" value="{{user_profile.firstname}}" required />
 					</div>
 					<div class="group">
 						<label class="label" for="lastname">Enter Last Name</label>

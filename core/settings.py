@@ -25,6 +25,7 @@ DISABLE_COLLECTSTATIC=1
 
 INSTALLED_APPS = [
     'gram',
+    'imagekit',
     'django_sass',
     'debug_toolbar',
     'django.contrib.admin',

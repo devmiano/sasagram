@@ -79,7 +79,7 @@
 }
 
 #homePath {
-  fill: #12ECF8;
+  fill: #400FBD;
 }
 
 #homePathOne {
@@ -126,8 +126,8 @@
 
 #addPathOne {
   fill: none;
-  stroke: #340C97;
-  stroke-width: 0.8rem;
+  stroke: #6320EE;
+  stroke-width: 1rem;
 }
 
 #addPathOne:hover, #addPathOne:active {
@@ -136,8 +136,7 @@
 
 #addPathOne:focus {
   fill: #12ECF8;
-  stroke: #12ECF8;
-  stroke-width: 0.5rem;
+  stroke: #6320EE;
 }
 
 #searchPath {
@@ -162,7 +161,7 @@
 }
 
 #settingsPath {
-  fill: #12ECF8;
+  fill: #400FBD;
 }
 
 #settingsPathOne {
@@ -183,24 +182,11 @@
 }
 
 #userPath {
-  fill: #6320EE;
+  fill: #400FBD;
 }
 
 #userPathOne {
-  fill: none;
-  stroke: none;
-}
-
-#userPathOne:hover, #userPathOne:active {
-  fill: #12ECF8;
-  stroke: #12ECF8;
-  stroke-width: 0.5rem;
-}
-
-#userPathOne:focus {
-  fill: #12ECF8;
-  stroke: #12ECF8;
-  stroke-width: 0.5rem;
+  fill: #CEFF1A;
 }
 
 #topbar {

@@ -65,7 +65,7 @@
 }
 
 #homePath {
-	fill: $sasa-200;
+	fill: $dark-100;
 }
 
 #homePathOne {
@@ -114,8 +114,8 @@
 
 #addPathOne {
 	fill: none;
-	stroke: $dark-200;
-	stroke-width: 0.8rem;
+	stroke: $sasa-500;
+	stroke-width: 1rem;
 
 	&:hover,
 	&:active {
@@ -124,8 +124,7 @@
 
 	&:focus {
 		fill: $sasa-200;
-		stroke: $sasa-200;
-		stroke-width: 0.5rem;
+		stroke: $sasa-500;
 	}
 }
 
@@ -152,7 +151,7 @@
 }
 
 #settingsPath {
-	fill: $sasa-200;
+	fill: $dark-100;
 }
 
 #settingsPathOne {
@@ -174,25 +173,11 @@
 }
 
 #userPath {
-	fill: $sasa-500;
+	fill: $dark-100;
 }
 
 #userPathOne {
-	fill: none;
-	stroke: none;
-
-	&:hover,
-	&:active {
-		fill: $sasa-200;
-		stroke: $sasa-200;
-		stroke-width: 0.5rem;
-	}
-
-	&:focus {
-		fill: $sasa-200;
-		stroke: $sasa-200;
-		stroke-width: 0.5rem;
-	}
+	fill: $sasa-100;
 }
 
 #topbar {

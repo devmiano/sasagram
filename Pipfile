@@ -15,6 +15,7 @@ django-sass = "*"
 python-decouple = "*"
 dj-database-url = "*"
 django-registration = "*"
+django-imagekit = "*"
 
 [dev-packages]
 

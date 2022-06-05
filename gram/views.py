@@ -4,7 +4,7 @@ from django.contrib import messages
 from django.contrib.auth.models import User, auth
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_list_or_404, get_object_or_404, redirect, render
-from .models import Gram, Profile
+from .models import Gram, Like, Profile
 
 def index(request):
   title = 'Share your Story, Saa ni Sasa'
@@ -12,6 +12,7 @@ def index(request):
   user_object = User.objects.get(username=request.user.username)
   user_profile = Profile.objects.get(user=user_object)
   feed = Gram.objects.order_by('-posted').all()
+  
   
   context = {
     'feed': feed,
@@ -164,11 +165,21 @@ def create(request):
 
 @login_required(login_url='login')
 def like(request):
-  title = 'Like'
-  template = 'gram/profile/profile.html'
+  username = request.user.username
+  gram_id = request.GET.get('gram_id')
+  gram = Gram.objects.get(id=gram_id)
+  gram_like = Like.objects.filter(gram_id=gram_id, username=username).first()
   
-  context = {
-    'title': title,
-  }
+  if gram_like is None:
+    new_like = Like.objects.create(gram_id=gram_id, username=username)
+    new_like.save()
+    gram.likes = gram.likes+1
+    gram.save()
+    return redirect('index')
   
-  return render(request, template, context)
+  else:
+    gram_like.delete()
+    gram.likes = gram.likes-1
+    gram.save()
+    return redirect('index')
+

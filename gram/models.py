@@ -16,6 +16,13 @@ class Profile(models.Model):
   
   def __str__(self):
     return self.user.username
+  
+class Like(models.Model):
+  gram_id = models.CharField(max_length=255)
+  username = models.CharField(max_length=255)
+  
+  def __str__(self):
+    return self.username
 
 
 class Gram(models.Model):

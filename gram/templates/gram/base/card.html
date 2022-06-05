@@ -20,7 +20,6 @@
 		<div class="left">
 			<a
 				href="{% url 'like' %}?gram_id={{gram.id}}"
-				target="_blank"
 				class="link"
 			>
 				<img
@@ -46,10 +45,19 @@
 		</a>
 	</div>
 	<div class="content">
+		{% if gram.likes == 0 %}
+		<p class="likes">No likes</p>
+		{% elif gram.likes == 1 %}
 		<p class="likes">
-			Liked by <span class="like">Jess</span> and
+			Liked by
+			<span class="like">{{gram.likes}}</span> other
+		</p>
+		{% else %}
+		<p class="likes">
+			Liked by
 			<span class="like">{{gram.likes}}</span> others
 		</p>
+		{% endif %}
 		<p class="caption">{{gram.caption}}</p>
 		<p class="date">{{gram.posted | date:"jS M Y"}}</p>
 	</div>

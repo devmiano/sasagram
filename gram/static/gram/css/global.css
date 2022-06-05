@@ -569,6 +569,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  justify-content: flex-start;
   border-radius: 0.7rem;
   background-color: #140439;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
@@ -628,15 +629,14 @@
 
 .card .post {
   width: 100%;
-  height: 100%;
+  height: 240px;
   text-decoration: none;
   padding: 0.5rem;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
 .card .post .image {
   width: 100%;
-  height: 240px;
+  height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;

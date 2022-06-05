@@ -36,6 +36,51 @@
 	}
 }
 
+.dropdown {
+	height: 100%;
+}
+
+.dropbtn {
+	margin: 0;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 0.1rem;
+	border-radius: 5rem;
+	background-color: $sasa-400;
+
+	.dropphoto {
+		width: 2rem;
+		height: 2rem;
+		@include image;
+		object-fit: cover;
+		border-radius: 3rem;
+	}
+}
+
+.drop-content {
+	z-index: 100;
+	display: none;
+	position: absolute;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+	.btn {
+		float: none;
+		display: block;
+		color: $sasa-200;
+		text-align: left;
+		text-decoration: none;
+
+		&:hover {
+			color: $sasa-100;
+		}
+	}
+}
+
+.show {
+	display: block;
+}
+
 #logo {
 	@include icons;
 }

@@ -43,6 +43,54 @@
   border-radius: 3rem;
 }
 
+.dropdown {
+  height: 100%;
+}
+
+.dropbtn {
+  margin: 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0.1rem;
+  border-radius: 5rem;
+  background-color: #6320EE;
+}
+
+.dropbtn .dropphoto {
+  width: 2rem;
+  height: 2rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  object-fit: cover;
+  border-radius: 3rem;
+}
+
+.drop-content {
+  z-index: 100;
+  display: none;
+  position: absolute;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.drop-content .btn {
+  float: none;
+  display: block;
+  color: #12ECF8;
+  text-align: left;
+  text-decoration: none;
+}
+
+.drop-content .btn:hover {
+  color: #CEFF1A;
+}
+
+.show {
+  display: block;
+}
+
 #logo {
   height: 2.4rem;
   width: fit-content;

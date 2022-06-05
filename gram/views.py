@@ -97,11 +97,20 @@ def logout(request):
 
 @login_required(login_url='login')
 def profile(request, pk):
-  title = 'Profile'
   template = 'gram/profile/profile.html'
+  
+  user_object = User.objects.get(username=pk)
+  user_profile = Profile.objects.get(user=user_object)
+  user_grams = Gram.objects.filter(user=pk)
+  total_grams = len(user_grams)
+  title = f'{user_profile.user.username}'
   
   context = {
     'title': title,
+    'user_grams': user_grams,
+    'total_grams': total_grams,
+    'user_object': user_object,
+    'user_profile': user_profile,
   }
   
   return render(request, template, context)

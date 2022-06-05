@@ -22,6 +22,8 @@
 	</head>
 	<body id="app">
 		{% block content %} {% endblock %}
+		{% load static %}
+		<script src="{% static 'gram/scripts/menu.js' %}"></script>
 		{% block scripts %}
 		<script
 			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"

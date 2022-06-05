@@ -1019,6 +1019,15 @@ input:-webkit-autofill:focus {
   margin-top: -0.8rem;
 }
 
+#profile .banner .info .bio {
+  font-size: 1rem;
+  font-weight: 300;
+  font-family: "Outfit", sans-serif;
+  letter-spacing: 0.05rem;
+  color: #F1ECFD;
+  margin: 0.8rem 0;
+}
+
 #profile .banner .stats {
   gap: 2rem;
   margin: 1.5rem 0;
@@ -1073,4 +1082,34 @@ input:-webkit-autofill:focus {
 #profile .banner .cta .btn:focus {
   color: #12ECF8;
   background: #FF337A;
+}
+
+#profile .grams {
+  padding: 4rem 0;
+}
+
+#profile .grams .gram {
+  width: 100%;
+  gap: 0.5rem;
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+#profile .grams .gram .link {
+  width: 100%;
+  height: 320px;
+  text-decoration: none;
+}
+
+#profile .grams .gram .link .photo {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  overflow: hidden;
+  object-fit: cover;
+  border-radius: 0.4rem;
 }

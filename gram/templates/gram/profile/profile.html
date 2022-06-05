@@ -11,13 +11,24 @@
 				/>
 			</div>
 			<div class="info">
-				<h5 class="title">{{user_profile.firstname}} {{user_profile.lastname}}</h5>
+				<h5 class="title">
+					{{user_profile.firstname}} {{user_profile.lastname}}
+				</h5>
 				<p class="username">@{{user_profile.user.username}}</p>
+				<p class="bio">{{user_profile.bio}}</p>
 			</div>
 			<div class="stats">
 				<div class="stat">
-					<p class="count">200</p>
+					{% if total_grams == 0 %}
+					<p class="count">No</p>
 					<p class="text">Posts</p>
+					{% elif total_grams == 1 %}
+					<p class="count">{{total_grams}}</p>
+					<p class="text">Post</p>
+					{% else %}
+					<p class="count">{{total_grams}}</p>
+					<p class="text">Posts</p>
+					{% endif %}
 				</div>
 				<div class="stat">
 					<p class="count">200</p>
@@ -32,8 +43,18 @@
 				<button class="btn">Follow</button>
 			</div>
 		</div>
-		<div class="content">
-			<h1 class="title">Posts</h1>
+		<div class="grams">
+			{% if user_grams %}
+			<div class="gram">
+				{% for gram in user_grams %}
+				<a class="link" href="#">
+					<img class="photo" src="{{gram.photo.url}}" alt="{{gram.title}}" />
+				</a>
+				{% endfor %}
+			</div>
+			{% else %}
+			<p class="title">No Posts</p>
+			{% endif %}
 		</div>
 	</section>
 </main>

@@ -1,0 +1,73 @@
+@import 'type';
+@import 'mixins';
+@import 'palette';
+
+#profile {
+	padding: 1rem;
+	width: 100%;
+
+	.banner {
+		width: 100%;
+		@include col-center;
+
+		.wrapper {
+			padding: 0.3rem;
+			width: fit-content;
+			height: fit-content;
+			border-radius: 3rem;
+			border: 2px solid $sasa-400;
+
+			.photo {
+				width: 5rem;
+				height: 5rem;
+				@include image;
+				object-fit: cover;
+				border-radius: 3rem;
+			}
+		}
+
+		.info {
+			@include col-center;
+
+			.title {
+				@include title;
+			}
+
+			.username {
+				@include subtext;
+				color: $sasa-200;
+				margin-top: -0.8rem;
+			}
+		}
+
+		.stats {
+			gap: 2rem;
+      margin: 1.5rem 0;
+			@include grid-three;
+
+			.stat {
+				@include col-center;
+
+        .count {
+          color: $ash-100;
+          font-weight: 600;
+          @include subtitle;
+          
+        }
+
+        .text {
+          color: $ash-300;
+          @include small;
+        }
+			}
+		}
+
+    .cta {
+      
+      .btn {
+        align-items: center;
+        @include btn;
+      }
+    }
+	}
+}

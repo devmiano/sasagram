@@ -26,7 +26,7 @@
 
 	.copy {
 		@include small;
-		color: $sasa-200;
+		color: $sasa-100;
 		text-align: center;
 
 		.gram {
@@ -41,7 +41,7 @@
 
 	.alt {
 		@include small;
-		color: $sasa-100;
+		color: $sasa-200;
 		text-align: right;
 
 		@include for-tab {

@@ -8,6 +8,8 @@ User = get_user_model()
 
 class Profile(models.Model):
   id_user = models.IntegerField()
+  firstname = models.CharField(max_length=255)
+  lastname = models.CharField(max_length=255)
   bio = models.TextField(max_length=2000, blank=True)
   user = models.ForeignKey(User, on_delete=models.CASCADE)
   photo = models.ImageField(upload_to = 'profile/', default='default-user.svg')
@@ -18,6 +20,13 @@ class Profile(models.Model):
     return self.user.username
   
 class Like(models.Model):
+  gram_id = models.CharField(max_length=255)
+  username = models.CharField(max_length=255)
+  
+  def __str__(self):
+    return self.username
+  
+class Comments(models.Model):
   gram_id = models.CharField(max_length=255)
   username = models.CharField(max_length=255)
   

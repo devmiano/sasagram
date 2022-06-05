@@ -7,13 +7,12 @@
 			<div class="container">
 				<div class="group">
 					<label class="label" for="photo">Photo</label>
-					<img class="photo" src="" alt="" />
-					<input class="input" type="file" name="photo" id="photo" value="" />
+					<input class="input" type="file" name="photo" id="photo" required />
 				</div>
 				<div class="groups">
 					<div class="group">
 						<label class="label" for="caption">Enter Title</label>
-						<input class="input" type="text" id="title" name="title" />
+						<input class="input" type="text" id="title" name="title" required />
 					</div>
 					<div class="group">
 						<label class="label" for="caption">Enter caption</label>
@@ -23,6 +22,7 @@
 							id="caption"
 							name="caption"
 							rows="3"
+							required
 							autocomplete="off"
 						></textarea>
 					</div>
@@ -30,7 +30,7 @@
 			</div>
 
 			<div class="cta">
-				<a class="btn-link" href="/">Cancel</a>
+				<a class="btn-link" href="/">Go Back</a>
 				<input class="btn-submit" type="submit" value="Create" />
 			</div>
 		</form>

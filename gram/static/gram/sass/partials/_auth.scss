@@ -63,7 +63,10 @@
 			.photo {
 				width: 240px;
 				height: 240px;
+				@include image;
 				margin: 0.7rem 0;
+				object-fit: cover;
+				border-radius: 0.3rem;
 			}
 
 			.label {

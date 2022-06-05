@@ -97,7 +97,7 @@ def logout(request):
   return redirect('login')
 
 @login_required(login_url='login')
-def profile(request):
+def profile(request, pk):
   title = 'Profile'
   template = 'gram/profile/profile.html'
   
@@ -107,36 +107,49 @@ def profile(request):
   
   return render(request, template, context)
 
+
 @login_required(login_url='login')
 def settings(request):
-  title = 'Settings'
   template = 'gram/profile/settings.html'
   user_profile = Profile.objects.get(user=request.user)
   
   if request.method == 'POST':
     if request.FILES.get('photo') == None:
       photo = user_profile.photo
+      firstname = request.POST['firstname']
+      lastname = request.POST['lastname']
       bio = request.POST['bio']
       
+      
       user_profile.photo = photo
+      user_profile.firstname = firstname
+      user_profile.lastname = lastname
       user_profile.bio = bio
       user_profile.save()
+      
       
     if request.FILES.get('photo') != None:
       photo = request.FILES.get('photo')
+      firstname = request.POST['firstname']
+      lastname = request.POST['lastname']
       bio = request.POST['bio']
       
+      
       user_profile.photo = photo
+      user_profile.firstname = firstname
+      user_profile.lastname = lastname
       user_profile.bio = bio
       user_profile.save()
-
+      
     return redirect('settings')
-  
+
+  title = f'Update Profile {user_profile.firstname}'
   context = {
     'title': title,
     'user_profile': user_profile,
   }
   return render(request, template, context)
+
 
 @login_required(login_url='login')
 def create(request):

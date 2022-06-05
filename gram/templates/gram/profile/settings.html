@@ -1,24 +1,29 @@
 {% extends 'gram/base.html' %} {% block content %}
 <main id="main">
-		<div class="forms">
-			<h1 class="title">{{title}}</h1>
-			<form id="form" action="" method="POST" enctype="multipart/form-data">
-				{% csrf_token %}
-				<div class="container">
+	<div class="forms">
+		<h1 class="title">{{title}}</h1>
+		<form id="form" action="" method="POST" enctype="multipart/form-data">
+			{% csrf_token %}
+			<div class="container">
+				<div class="group">
+					<label class="label" for="photo">Photo</label>
+					<img class="photo" src="{{ user_profile.photo.url }}" alt="profile" />
+					<input
+						class="input"
+						type="file"
+						name="photo"
+						id="photo"
+						value="{{user_profile.photo}}"
+					/>
+				</div>
+				<div class="groups">
 					<div class="group">
-						<label class="label" for="photo">Photo</label>
-						<img
-							class="photo"
-							src="{{ user_profile.photo.url }}"
-							alt="profile"
-						/>
-						<input
-							class="input"
-							type="file"
-							name="photo"
-							id="photo"
-							value="{{user_profile.photo}}"
-						/>
+						<label class="label" for="firstname">Enter First Name</label>
+						<input class="input" type="text" id="firstname" name="firstname" value="{{user_profile.firstname}}" />
+					</div>
+					<div class="group">
+						<label class="label" for="lastname">Enter Last Name</label>
+						<input class="input" type="text" id="lastname" name="lastname" value="{{user_profile.lastname}}" />
 					</div>
 					<div class="group">
 						<label class="label" for="bio">Bio</label>
@@ -34,12 +39,12 @@
 						>
 					</div>
 				</div>
-
-				<div class="cta">
-					<a class="btn-link" href="/">Cancel</a>
-					<input class="btn-submit" type="submit" value="Save" />
-				</div>
-			</form>
-		</div>
+			</div>
+			<div class="cta">
+				<a class="btn-link" href="/">Go Back</a>
+				<input class="btn-submit" type="submit" value="Save" />
+			</div>
+		</form>
+	</div>
 </main>
 {% endblock %}

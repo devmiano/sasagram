@@ -35,6 +35,7 @@
 				width: 2rem;
 				height: 2rem;
 				@include image;
+				object-fit: cover;
 				border-radius: 7rem;
 			}
 

@@ -9,4 +9,5 @@ urlpatterns = [
   path('user/create/', views.create, name='create'),
   path('user/profile/', views.profile, name='profile'),
   path('user/settings/', views.settings, name='settings'),
+  path('like', views.like, name='like'),
 ]

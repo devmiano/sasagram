@@ -8,24 +8,47 @@
 	@include col-start;
 	border-radius: 0.7rem;
 	background-color: $dark-500;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+		rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+
+	&:hover {
+		box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+			rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+			border: 1px solid $dark-200;
+	}
 
 	.user {
-		gap: 0.4rem;
+		width: 100%;
 		@include link;
-		@include row-start;
-		align-items: center;
-		padding: 0.7rem 0.7rem 0.3rem 0.7rem;
+		@include row-between;
+		padding: 0.7rem 0.7rem 0 0.7rem;
 
-		.prof {
-			width: 2rem;
-			height: 2rem;
-			@include image;
-			border-radius: 7rem;
+		.username {
+			gap: 0.4rem;
+			@include link;
+			@include row-start;
+			align-items: center;
+			width: fit-content;
+
+			.prof {
+				width: 2rem;
+				height: 2rem;
+				@include image;
+				border-radius: 7rem;
+			}
+
+			.name {
+				@include small;
+				color: $sasa-200;
+			}
 		}
 
-		.name {
-			@include small;
-			color: $sasa-200;
+		.link {
+			@include link;
+
+			.icon {
+				height: 1rem;
+			}
 		}
 	}
 
@@ -33,15 +56,17 @@
 		width: 100%;
 		height: 100%;
 		@include link;
+		padding: 0.5rem;
+		box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+			rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 
 		.image {
-			width: auto;
-			height: auto;
+			width: 100%;
+			height: 240px;
 			@include image;
 			overflow: hidden;
-			padding: 0.32rem;
-			object-fit: contain;
-			border-radius: 0.7rem;
+			object-fit: cover;
+			border-radius: 0.4rem;
 		}
 	}
 

@@ -571,9 +571,25 @@
   justify-content: center;
   border-radius: 0.7rem;
   background-color: #140439;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.card:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  border: 1px solid #340C97;
 }
 
 .card .user {
+  width: 100%;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.7rem 0.7rem 0 0.7rem;
+}
+
+.card .user .username {
   gap: 0.4rem;
   text-decoration: none;
   display: flex;
@@ -581,10 +597,10 @@
   align-items: flex-start;
   justify-content: flex-start;
   align-items: center;
-  padding: 0.7rem 0.7rem 0.3rem 0.7rem;
+  width: fit-content;
 }
 
-.card .user .prof {
+.card .user .username .prof {
   width: 2rem;
   height: 2rem;
   background-size: cover;
@@ -594,7 +610,7 @@
   border-radius: 7rem;
 }
 
-.card .user .name {
+.card .user .username .name {
   font-weight: 200;
   font-size: 0.84rem;
   font-family: "Outfit", sans-serif;
@@ -602,23 +618,32 @@
   color: #12ECF8;
 }
 
+.card .user .link {
+  text-decoration: none;
+}
+
+.card .user .link .icon {
+  height: 1rem;
+}
+
 .card .post {
   width: 100%;
   height: 100%;
   text-decoration: none;
+  padding: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
 .card .post .image {
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 240px;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
   overflow: hidden;
-  padding: 0.32rem;
-  object-fit: contain;
-  border-radius: 0.7rem;
+  object-fit: cover;
+  border-radius: 0.4rem;
 }
 
 .card .footer {

@@ -160,3 +160,15 @@ def create(request):
     }
   
   return render(request, template, context)
+
+
+@login_required(login_url='login')
+def like(request):
+  title = 'Like'
+  template = 'gram/profile/profile.html'
+  
+  context = {
+    'title': title,
+  }
+  
+  return render(request, template, context)

@@ -58,6 +58,16 @@
 	}
 }
 
+.searchbtn {
+	margin: 0;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 0.1rem;
+	border-radius: 5rem;
+	background-color: transparent;
+}
+
 .drop-content {
 	z-index: 100;
 	display: none;
@@ -79,6 +89,34 @@
 
 .show {
 	display: block;
+}
+
+.searchdown {
+	position: relative;
+	display: inline-block;
+
+	&:hover .searchform {
+		gap: 0.2rem;
+		display: block;
+		@include row-center;
+	}
+
+	.searchform {
+		z-index: 100;
+		display: none;
+		position: absolute;
+		background-color: transparent;
+		
+		.search {
+			display: block;
+			@include input;
+		}
+
+		.inputbtn {
+			display: block;
+			@include btn;
+		}
+	}
 }
 
 #logo {

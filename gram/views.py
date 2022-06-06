@@ -252,3 +252,32 @@ def follow(request):
   else:
     return redirect('index')
   
+@login_required(login_url='login')
+def search(request):
+  user_object = User.objects.get(username=request.user.username)
+  user_profile = Profile.objects.get(user=user_object)
+  template = 'gram/search.html'
+  title = 'Search'
+  
+  if request.method == 'POST':
+    username = request.POST['username']
+    username_obj = User.objects.filter(username__icontains=username)
+    
+    search_profile = []
+    search_profile_feed = []
+    
+    for users in username_obj:
+      search_profile.append(users.id)
+      
+    for ids in search_profile:
+      profile_feeds = Profile.objects.filter(id_user=ids)
+      search_profile_feed.append(profile_feeds)
+      
+    search_profile_feed = list(chain(*search_profile_feed))  
+    
+    context = {
+      'title': title,
+      'user_profile': user_profile,
+      'search_profile_feed': search_profile_feed,
+    }
+  return render(request, template, context)

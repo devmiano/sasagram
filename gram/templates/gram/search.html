@@ -1,0 +1,21 @@
+{% extends 'gram/base.html' %} {% block content %}
+<main id="main">
+	{% include 'gram/navbar.html' %}
+	<section id="hero">
+		<h1 class="title">{{title}}</h1>
+		{% if search_profile_feed %}
+		<div id="grid">
+			{% for feed in search_profile_feed %}
+			<a href="{% url 'profile' feed.user.username %}" class="link">
+				<p>{{feed.user.username}}</p>
+				<img src="{{feed.photo.url}}" alt="{{feed.user.username}}" />
+				<p>{{feed.bio}}</p>
+			</a>
+			{% endfor %}
+		</div>
+		{% else %}
+		<p>Search results currently unavailable</p>
+		{% endif %}
+	</section>
+</main>
+{% include 'gram/footer.html' %} {% endblock %}

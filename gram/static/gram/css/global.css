@@ -68,6 +68,16 @@
   border-radius: 3rem;
 }
 
+.searchbtn {
+  margin: 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0.1rem;
+  border-radius: 5rem;
+  background-color: transparent;
+}
+
 .drop-content {
   z-index: 100;
   display: none;
@@ -89,6 +99,86 @@
 
 .show {
   display: block;
+}
+
+.searchdown {
+  position: relative;
+  display: inline-block;
+}
+
+.searchdown:hover .searchform {
+  gap: 0.2rem;
+  display: block;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchdown .searchform {
+  z-index: 100;
+  display: none;
+  position: absolute;
+  background-color: transparent;
+}
+
+.searchdown .searchform .search {
+  display: block;
+  outline: none;
+  color: #12ECF8;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  border-width: 0 0 3px;
+  border-color: #6320EE;
+  background: transparent;
+}
+
+.searchdown .searchform .search::placeholder {
+  color: #12ECF8;
+  background: transparent;
+}
+
+.searchdown .searchform .search:focus {
+  color: #12ECF8;
+  border-color: #CEFF1A;
+  background: transparent;
+}
+
+.searchdown .searchform .search:active {
+  color: #12ECF8;
+  border-color: #CEFF1A;
+  background: transparent;
+}
+
+.searchdown .searchform .search:focus-visible {
+  color: #12ECF8;
+  border-color: #CEFF1A;
+  background: transparent;
+}
+
+.searchdown .searchform .inputbtn {
+  display: block;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-weight: 500;
+  color: #140439;
+  font-size: 0.8rem;
+  padding: 0.7rem 1rem;
+  background: #CEFF1A;
+  border-radius: 0.3rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+
+.searchdown .searchform .inputbtn:hover, .searchdown .searchform .inputbtn:active {
+  color: #6320EE;
+  background: #12ECF8;
+}
+
+.searchdown .searchform .inputbtn:focus {
+  color: #12ECF8;
+  background: #FF337A;
 }
 
 #logo {

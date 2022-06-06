@@ -2,7 +2,7 @@ from datetime import datetime
 from django.contrib import messages
 from django.contrib.auth.models import User, auth
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import get_list_or_404, get_object_or_404, redirect, render
+from django.shortcuts import redirect, render
 from .models import *
 from itertools import chain
 import random
@@ -143,6 +143,9 @@ def profile(request, pk):
   user_object = User.objects.get(username=pk)
   user_profile = Profile.objects.get(user=user_object)
   user_grams = Gram.objects.filter(user=pk)
+  # user_likes = Like.objects.filter(username=pk)
+  # gram_liked = Gram.objects.filter(user_likes).all()
+  
   total_grams = len(user_grams)
   title = f'{user_profile.user.username}'
   follower = request.user.username

@@ -33,9 +33,10 @@ class Follow(models.Model):
   def __str__(self):
     return self.user
   
-class Comments(models.Model):
+class Comment(models.Model):
   gram_id = models.CharField(max_length=255)
   username = models.CharField(max_length=255)
+  caption = models.TextField(max_length=2000)
   
   def __str__(self):
     return self.username

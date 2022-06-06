@@ -4,18 +4,30 @@ from django.contrib.auth.models import User, auth
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_list_or_404, get_object_or_404, redirect, render
 from .models import *
+from itertools import chain
 
 def index(request):
   title = 'Share your Story, Saa ni Sasa'
   template = 'gram/index.html'
   user_object = User.objects.get(username=request.user.username)
   user_profile = Profile.objects.get(user=user_object)
-  feed = Gram.objects.order_by('-posted').all()
+  grams = Gram.objects.order_by('-posted').all()
+  follow_feed = []
+  feed = []
+  user_follow = Follow.objects.filter(follower=request.user.username)
   
+  for users  in user_follow:
+    follow_feed.append(users.user)
+    
+  for usernames in follow_feed:
+    gram_feeds = Gram.objects.filter(user=usernames)
+    feed.append(gram_feeds)
+    
+  gram_feed = list(chain(*feed))
   
   context = {
-    'feed': feed,
     'title': title,
+    'grams': gram_feed,
     'user_profile': user_profile,
   }
   

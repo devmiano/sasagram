@@ -3,13 +3,13 @@ from django.contrib import messages
 from django.contrib.auth.models import User, auth
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_list_or_404, get_object_or_404, redirect, render
-from .models import Gram, Like, Profile
+from .models import *
 
 def index(request):
   title = 'Share your Story, Saa ni Sasa'
   template = 'gram/index.html'
-  user_object = User.objects.filter(username=request.user.username).first()
-  user_profile = Profile.objects.filter(user=user_object).first()
+  user_object = User.objects.get(username=request.user.username)
+  user_profile = Profile.objects.get(user=user_object)
   feed = Gram.objects.order_by('-posted').all()
   
   
@@ -104,13 +104,27 @@ def profile(request, pk):
   user_grams = Gram.objects.filter(user=pk)
   total_grams = len(user_grams)
   title = f'{user_profile.user.username}'
+  follower = request.user.username
+  user = pk
+  
+  if Follow.objects.filter(user=user, follower=follower).first():
+    btn_txt = 'Unfollow'
+  else:
+    btn_txt = 'Follow'
+    
+    
+  user_followers = len(Follow.objects.filter(user=pk))
+  user_following = len(Follow.objects.filter(follower=pk))
   
   context = {
     'title': title,
+    'btn_txt': btn_txt,
     'user_grams': user_grams,
     'total_grams': total_grams,
     'user_object': user_object,
     'user_profile': user_profile,
+    'user_followers': user_followers,
+    'user_following': user_following,
   }
   
   return render(request, template, context)
@@ -206,3 +220,23 @@ def like(request):
     gram.save()
     return redirect('index')
 
+@login_required(login_url='login')
+def follow(request):
+  if request.method == 'POST':
+    follower = request.POST['follower']
+    user = request.POST['user']
+    
+    if Follow.objects.filter(user=user, follower=follower).first():
+      unfollowed = Follow.objects.get(user=user, follower=follower)
+      unfollowed.delete()
+      
+      return redirect('/profile/'+user)
+    
+    else:
+      followed = Follow.objects.create(user=user, follower=follower)
+      followed.save()
+      
+      return redirect('/profile/'+user)
+  else:
+    return redirect('index')
+  

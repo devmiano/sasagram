@@ -69,8 +69,9 @@
 
 		.cta {
 			.btn {
-				align-items: center;
 				@include btn;
+        @include link;
+        align-items: center;
 			}
 		}
 	}

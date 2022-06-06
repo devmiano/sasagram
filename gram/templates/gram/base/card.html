@@ -1,7 +1,7 @@
 {% load static %} {% for gram in grams %}
 <div class="card">
 	<div class="user">
-		<a class="username" href="#">
+		<a class="username" href="{% url 'profile' gram.user %}">
 			<img class="prof" src="{{gram.profile.photo.url}}" alt="{{gram.user}}" />
 			<p class="name">@{{gram.user}}</p>
 		</a>

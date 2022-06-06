@@ -26,6 +26,13 @@ class Like(models.Model):
   def __str__(self):
     return self.username
   
+class Follow(models.Model):
+  user = models.CharField(max_length=255)
+  follower = models.CharField(max_length=255)
+  
+  def __str__(self):
+    return self.user
+  
 class Comments(models.Model):
   gram_id = models.CharField(max_length=255)
   username = models.CharField(max_length=255)

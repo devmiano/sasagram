@@ -31,17 +31,38 @@
 					{% endif %}
 				</div>
 				<div class="stat">
-					<p class="count">200</p>
+					{% if user_followers == 0 %}
+					<p class="count">No</p>
 					<p class="text">Followers</p>
+					{% elif user_followers == 1 %}
+					<p class="count">{{user_followers}}</p>
+					<p class="text">Follower</p>
+					{% else %}
+					<p class="count">{{user_followers}}</p>
+					<p class="text">Followers</p>
+					{% endif %}
 				</div>
 				<div class="stat">
-					<p class="count">200</p>
+					{% if user_following == 0 %}
+					<p class="count">No</p>
 					<p class="text">Following</p>
+					{% else %}
+					<p class="count">{{user_following}}</p>
+					<p class="text">Following</p>
+					{% endif %}
 				</div>
 			</div>
-			<div class="cta">
-				<button class="btn">Follow</button>
-			</div>
+			<form class="cta" action="/follow" method="POST">
+				{% csrf_token %}
+				<input type="hidden" name="follower" value="{{user.username}}" />
+				<input type="hidden" name="user" value="{{user_object.username}}" />
+
+				{% if user_object.username == user.username %}
+				<a class="btn" href="{% url 'settings' %}">Update Profile</a>
+				{% else %}
+				<button class="btn" type="submit">{{btn_txt}}</button>
+				{% endif %}
+			</form>
 		</div>
 		<div class="grams">
 			{% if user_grams %}

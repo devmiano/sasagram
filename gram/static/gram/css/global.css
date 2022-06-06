@@ -1060,7 +1060,6 @@ input:-webkit-autofill:focus {
 }
 
 #profile .banner .cta .btn {
-  align-items: center;
   border: none;
   outline: none;
   cursor: pointer;
@@ -1072,6 +1071,8 @@ input:-webkit-autofill:focus {
   border-radius: 0.3rem;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
+  text-decoration: none;
+  align-items: center;
 }
 
 #profile .banner .cta .btn:hover, #profile .banner .cta .btn:active {

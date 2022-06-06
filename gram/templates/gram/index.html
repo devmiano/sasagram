@@ -11,14 +11,15 @@
 			{% endfor %}
 		</div>
 		{% else %}
-		<p>No suggestions available.</p>
+		<p>Followed all currently logged in users</p>
 		{% endif %}
 	</section>
 	<section id="hero">
 		{% if grams %}
 		<div id="grid">{% include 'gram/base/card.html' with grams=grams %}</div>
 		{% else %}
-		<p>Feed currently unavailable</p>
+		<p>Your feed is currently empty, </p>
+		<p>Follow some of the suggested users to see their latest posts </p>
 		{% endif %}
 	</section>
 </main>

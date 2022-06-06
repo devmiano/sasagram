@@ -136,8 +136,8 @@
 
 #suggestions {
 	gap: 1rem;
-	@include grid-five;
 	width: 100%;
+	@include row-center;
 
 	.link {
 		@include link;

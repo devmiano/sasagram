@@ -5,13 +5,13 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_list_or_404, get_object_or_404, redirect, render
 from .models import *
 from itertools import chain
+import random
 
 def index(request):
   title = 'Share your Story, Saa ni Sasa'
   template = 'gram/index.html'
   user_object = User.objects.get(username=request.user.username)
   user_profile = Profile.objects.get(user=user_object)
-  grams = Gram.objects.order_by('-posted').all()
   follow_feed = []
   feed = []
   user_follow = Follow.objects.filter(follower=request.user.username)
@@ -25,9 +25,36 @@ def index(request):
     
   gram_feed = list(chain(*feed))
   
+  all_users = User.objects.all()
+  all_user_following = []
+  
+  for user in user_follow:
+    user_list = User.objects.get(username=user.user)
+    all_user_following.append(user_list)
+    
+  user_suggestions = [x for x in list(all_users) if (x not in list(all_user_following))]
+    
+  current_user = User.objects.filter(username=request.user.username)
+  new_suggestions = [x for x in list(user_suggestions) if (x not in list(current_user))]
+  
+  random.shuffle(new_suggestions)
+  
+  profile_feed = []
+  profile_feeds = []
+  
+  for users in new_suggestions:
+    profile_feed.append(users.id)
+    
+  for ids in profile_feed:
+    users_feeds = Profile.objects.filter(id_user=ids)
+    profile_feeds.append(users_feeds)
+  
+  suggestions_feed = list(chain(*profile_feeds))
+  
   context = {
     'title': title,
     'grams': gram_feed,
+    'suggestions': suggestions_feed[:5],
     'user_profile': user_profile,
   }
   
@@ -280,4 +307,5 @@ def search(request):
       'user_profile': user_profile,
       'search_profile_feed': search_profile_feed,
     }
+    
   return render(request, template, context)

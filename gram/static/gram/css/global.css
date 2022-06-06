@@ -858,6 +858,39 @@
   padding-top: 0.5rem;
 }
 
+#heros {
+  width: 100%;
+  padding: 1rem 4rem;
+}
+
+#suggestions {
+  gap: 1rem;
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  width: 100%;
+}
+
+#suggestions .link {
+  text-decoration: none;
+  padding: 0.3rem;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 3rem;
+  border: 2px solid #FF337A;
+}
+
+#suggestions .link .photo {
+  width: 4rem;
+  height: 4rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  object-fit: cover;
+  border-radius: 3rem;
+}
+
 #hero {
   padding: 1rem;
   width: 100%;

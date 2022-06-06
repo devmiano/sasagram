@@ -1,8 +1,20 @@
 {% extends 'gram/base.html' %} {% block content %}
 <main id="main">
 	{% include 'gram/navbar.html' %}
+	<section id="heros">
+		{% if suggestions %}
+		<div id="suggestions">
+			{% for suggestion in suggestions %}
+			<a class="link" href="{% url 'profile' suggestion.user %}">
+				<img class="photo" src="{{suggestion.photo.url}}" alt="{{suggestion.user}}">
+			</a>
+			{% endfor %}
+		</div>
+		{% else %}
+		<p>No suggestions available.</p>
+		{% endif %}
+	</section>
 	<section id="hero">
-		<h1 class="title">Feed</h1>
 		{% if grams %}
 		<div id="grid">{% include 'gram/base/card.html' with grams=grams %}</div>
 		{% else %}

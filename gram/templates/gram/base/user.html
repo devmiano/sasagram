@@ -1,0 +1,6 @@
+{% load static %} {% for user in users %}
+<a id="user" href="{% url 'profile' user.user %}">
+	<img class="prof" src="{{user.profile.photo.url}}" alt="{{user.user}}" />
+  <p>{{user.user}}</p>
+</a>
+{% endfor %}

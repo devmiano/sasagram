@@ -7,6 +7,8 @@ from .models import *
 from itertools import chain
 import random
 
+
+@login_required(login_url='login')
 def index(request):
   title = 'Share your Story, Saa ni Sasa'
   template = 'gram/index.html'

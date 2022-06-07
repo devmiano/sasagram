@@ -30,7 +30,7 @@
 								src="{% static 'gram/icons/line/comment-alt.svg'%}"
 								alt="comment"
 							/>
-							<span class="like">{{gram.comments.count}}</span>
+							<span class="like">{{total_comments}}</span>
 						</a>
 					</div>
 					<a href="#" class="link">
@@ -62,6 +62,20 @@
 		{% else %}
 		<p>Post currently unavailable</p>
 		{% endif %}
+		<div id="comments">
+			{% if comments %}
+      {% for comment in comments %}
+			<div class="comment">
+				<a class="link" href="{% url 'profile' comment.username %}">
+					<p class="user">{{comment.username}}</p>
+				</a>
+				<p class="caption">{{comment.caption}}</p>
+			</div>
+      {% endfor %}
+			{% else %}
+			<p class="caption">no comments yet</p>
+			{% endif %}
+		</div>
 	</section>
 </main>
 {% include 'gram/footer.html' %} {% endblock %}

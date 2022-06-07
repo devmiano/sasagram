@@ -39,6 +39,7 @@ class Comment(models.Model):
   gram_id = models.CharField(max_length=255)
   username = models.CharField(max_length=255)
   caption = models.TextField(max_length=2000)
+  created = models.DateTimeField('date created', default=timezone.now)
   
   def save_comment(self):
     self.save()

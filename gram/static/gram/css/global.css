@@ -185,37 +185,37 @@
 }
 
 #logo {
-  height: 2.4rem;
+  height: 3rem;
   width: fit-content;
 }
 
 #home {
-  height: 2.4rem;
+  height: 3rem;
   width: fit-content;
 }
 
 #heart {
-  height: 2.4rem;
+  height: 3rem;
   width: fit-content;
 }
 
 #add {
-  height: 2.4rem;
+  height: 3rem;
   width: fit-content;
 }
 
 #search {
-  height: 2.4rem;
+  height: 3rem;
   width: fit-content;
 }
 
 #settings {
-  height: 2.4rem;
+  height: 3rem;
   width: fit-content;
 }
 
 #user {
-  height: 2.4rem;
+  height: 3rem;
   width: fit-content;
 }
 
@@ -346,13 +346,14 @@
 }
 
 .forms {
+  margin-top: 1rem;
   width: 100%;
   min-height: 70vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  background-color: #21075F;
+  background-color: #140439;
   padding: 2rem;
   border-radius: 0.3rem;
 }
@@ -1371,7 +1372,7 @@ input:-webkit-autofill:focus {
   font-size: 0.84rem;
   font-family: "Outfit", sans-serif;
   letter-spacing: 0.05rem;
-  color: #F1ECFD;
+  color: #B9A1F7;
   font-weight: 300;
   font-size: 0.9rem;
 }
@@ -1461,4 +1462,45 @@ input:-webkit-autofill:focus {
 #pin .pinform .inputbtn:focus {
   color: #12ECF8;
   background: #FF337A;
+}
+
+#comments {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0.3rem 0;
+}
+
+#comments .comment {
+  padding: 0.2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#comments .comment .link {
+  text-decoration: none;
+}
+
+#comments .comment .link .user {
+  font-weight: 200;
+  font-size: 0.84rem;
+  font-family: "Outfit", sans-serif;
+  letter-spacing: 0.05rem;
+  color: #9D7BF4;
+  font-size: 0.75rem;
+}
+
+#comments .comment .caption {
+  font-weight: 200;
+  font-size: 0.84rem;
+  font-family: "Outfit", sans-serif;
+  letter-spacing: 0.05rem;
+  color: #F1ECFD;
+  font-weight: 300;
+  font-size: 0.9rem;
+  margin-top: -0.3rem;
 }

@@ -3,13 +3,14 @@
 @import 'palette';
 
 .forms {
+	margin-top: 1rem;
 	width: 100%;
 	min-height: 70vh;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: center;
-	background-color: $dark-400;
+	background-color: $dark-500;
 	padding: 2rem;
 	border-radius: 0.3rem;
 }

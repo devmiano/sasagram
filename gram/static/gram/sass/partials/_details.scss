@@ -94,7 +94,7 @@
 
 			.caption {
 				@include small;
-				color: $ash-100;
+				color: $ash-300;
 				font-weight: 300;
 				font-size: 0.9rem;
 			}
@@ -109,7 +109,7 @@
 	}
 
 	.pinform {
-    margin-top: 1rem;
+		margin-top: 1rem;
 		width: 100%;
 		@include row-start;
 		overflow: hidden;
@@ -117,7 +117,7 @@
 		background-color: $dark-400;
 
 		.comment {
-      height: 100;
+			height: 100;
 			width: 100%;
 			@include input;
 			padding: 0.5rem;
@@ -130,6 +130,35 @@
 		.inputbtn {
 			@include btn;
 			float: right;
+		}
+	}
+}
+
+#comments {
+	width: 100%;
+	@include col-start;
+	padding: 0.3rem 0;
+
+	.comment {
+		padding: 0.2rem 0;
+		@include col-start;
+
+		.link {
+			@include link;
+
+			.user {
+				@include small;
+				color: $ash-400;
+				font-size: 0.75rem;
+			}
+		}
+
+		.caption {
+			@include small;
+			color: $ash-100;
+			font-weight: 300;
+			font-size: 0.9rem;
+			margin-top: -0.3rem;
 		}
 	}
 }

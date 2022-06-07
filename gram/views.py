@@ -317,11 +317,11 @@ def search(request):
 
 
 def details(request, gram_id):
-  gram = Gram.objects.get(id=gram_id)
+  gram = Gram.objects.filter(id=gram_id).first()
   user_object = User.objects.get(username=request.user.username)
   user_profile = Profile.objects.get(user=user_object)
-
-  # total_comments = 
+  comments = Comment.objects.filter(gram_id=gram_id).reverse()
+  total_comments = len(comments)
   title = f'{gram.title}'
   template = 'gram/details.html'
   
@@ -339,6 +339,8 @@ def details(request, gram_id):
   context = {
       'gram': gram,
       'title': title,
+      'comments': comments,
+      'total_comments': total_comments,
   }
 
   return render(request, template, context)

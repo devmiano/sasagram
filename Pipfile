@@ -16,6 +16,7 @@ python-decouple = "*"
 dj-database-url = "*"
 django-registration = "*"
 django-imagekit = "*"
+cloudinary = "*"
 
 [dev-packages]
 autopep8 = "*"

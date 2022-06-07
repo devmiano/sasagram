@@ -56,7 +56,7 @@ def index(request):
   context = {
     'title': title,
     'grams': gram_feed,
-    'suggestions': suggestions_feed[:7],
+    'suggestions': suggestions_feed[:4],
     'user_profile': user_profile,
   }
   

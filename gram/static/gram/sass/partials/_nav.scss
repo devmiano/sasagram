@@ -102,11 +102,14 @@
 	}
 
 	.searchform {
+		right: -5rem;
+		padding: 2rem;
 		z-index: 100;
 		display: none;
 		position: absolute;
-		background-color: transparent;
-		
+		border-radius: 0.3rem;
+		background-color: $dark-400;
+
 		.search {
 			display: block;
 			@include input;

@@ -5,7 +5,7 @@
 #app {
 	margin: 0 auto;
 	padding: 0.5rem;
-	max-width: 1100px;
+	max-width: 600px;
 	min-height: 100vh;
 	@include col-center;
 
@@ -25,7 +25,7 @@
 #grid {
 	width: 100%;
 	gap: 0.5rem;
-	@include grid-three;
+	@include grid-one;
 
 	@include for-phone {
 		gap: 0.5rem;
@@ -33,7 +33,7 @@
 	}
 	@include for-tab {
 		gap: 0.5rem;
-		@include grid-two;
+		@include grid-one;
 	}
 }
 

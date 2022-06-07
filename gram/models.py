@@ -1,10 +1,9 @@
-from email.policy import default
 import uuid
 import cloudinary
 from django.db import models
-from cloudinary.models import CloudinaryField
 from datetime import datetime
 from django.utils import timezone
+from cloudinary.models import CloudinaryField
 from django.contrib.auth import get_user_model
 
 User = get_user_model()
@@ -15,8 +14,7 @@ class Profile(models.Model):
   lastname = models.CharField(max_length=255)
   bio = models.TextField(max_length=2000, blank=True)
   user = models.ForeignKey(User, on_delete=models.CASCADE)
-  cloud_photo = cloudinary.models.CloudinaryField('image')
-  photo = models.FileField(upload_to='profile/%y/', default='default-user.svg')
+  photo = cloudinary.models.CloudinaryField('image')
   created = models.DateTimeField('date created', default = timezone.now)
   updated = models.DateTimeField('date updated', default=timezone.now)
   
@@ -56,8 +54,7 @@ class Gram(models.Model):
   id = models.UUIDField(primary_key=True, default=uuid.uuid4)
   title = models.CharField(max_length=200)
   caption = models.TextField(max_length=2000)
-  cloud_photo = cloudinary.models.CloudinaryField('image')
-  photo = models.FileField(upload_to='grams/%y/')
+  photo = cloudinary.models.CloudinaryField('image')
   profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
   posted = models.DateTimeField('date published', default=timezone.now)
   updated = models.DateTimeField('date updated', default=timezone.now)

@@ -47,6 +47,17 @@
 					<p class="date">Posted {{gram.posted | timesince}} ago</p>
 				</div>
 			</div>
+			<form class="pinform" action="/comment/" method="POST">
+				{% csrf_token %}
+				<input
+					class="comment"
+					placeholder="comment..."
+					type="comment"
+					name="comment"
+					id="comment"
+				/>
+				<input class="inputbtn" type="submit" value="comment" />
+			</form>
 		</div>
 		{% else %}
 		<p>Post currently unavailable</p>

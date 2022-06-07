@@ -1385,3 +1385,80 @@ input:-webkit-autofill:focus {
   font-size: 0.8rem;
   padding-top: 0.5rem;
 }
+
+#pin .pinform {
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  overflow: hidden;
+  border-radius: 0.3rem;
+  background-color: #21075F;
+}
+
+#pin .pinform .comment {
+  height: 100;
+  width: 100%;
+  outline: none;
+  color: #12ECF8;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  border-width: 0 0 3px;
+  border-color: #6320EE;
+  background: transparent;
+  padding: 0.5rem;
+}
+
+#pin .pinform .comment::placeholder {
+  color: #12ECF8;
+  background: transparent;
+}
+
+#pin .pinform .comment:focus {
+  color: #12ECF8;
+  border-color: #CEFF1A;
+  background: transparent;
+}
+
+#pin .pinform .comment:active {
+  color: #12ECF8;
+  border-color: #CEFF1A;
+  background: transparent;
+}
+
+#pin .pinform .comment:focus-visible {
+  color: #12ECF8;
+  border-color: #CEFF1A;
+  background: transparent;
+}
+
+#pin .pinform .comment:placeholder {
+  padding: 0.5rem;
+}
+
+#pin .pinform .inputbtn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-weight: 500;
+  color: #140439;
+  font-size: 0.8rem;
+  padding: 0.7rem 1rem;
+  background: #CEFF1A;
+  border-radius: 0.3rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  float: right;
+}
+
+#pin .pinform .inputbtn:hover, #pin .pinform .inputbtn:active {
+  color: #6320EE;
+  background: #12ECF8;
+}
+
+#pin .pinform .inputbtn:focus {
+  color: #12ECF8;
+  background: #FF337A;
+}

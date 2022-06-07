@@ -1,15 +1,52 @@
-{% extends 'gram/base.html' %} {% block content %}
+{% extends 'gram/base.html' %} {% block content %} {% load static %}
 <main id="main">
 	<section id="hero">
-		<h1 class="title">{{title}}</h1>
 		{% if gram %}
-		<div id="">
-				<img src="{{gram.profile.photo.url}}" alt="{{gram.profile.user.username}}" />
-        <img src="{{gram.photo.url}}" alt="{{gram.title}}" />
-        <p>{{gram.title}}</p>
-				<p>{{gram.caption}}</p>
-				<p>{{gram.posted}}</p>
-				<p>{{gram.likes}}</p>
+		<div id="pin">
+			<a class="pinheader" href="{% url 'profile' gram.user %}">
+				<img
+					class="photo"
+					src="{{gram.profile.photo.url}}"
+					alt="{{gram.profile.user.username}}"
+				/>
+			</a>
+			<div class="pinimage">
+				<img class="photo" src="{{gram.photo.url}}" alt="{{gram.title}}" />
+			</div>
+			<div class="pinfooter">
+				<div class="footer">
+					<div class="left">
+						<a href="{% url 'like' %}?gram_id={{gram.id}}" class="link">
+							<img
+								class="icon"
+								src="{% static 'gram/icons/line/heart-alt.svg'%}"
+								alt="heart"
+							/>
+							<span class="like">{{gram.likes}}</span>
+						</a>
+						<a href="{% url 'details' gram.id %}" class="link">
+							<img
+								class="icon"
+								src="{% static 'gram/icons/line/comment-alt.svg'%}"
+								alt="comment"
+							/>
+							<span class="like">{{gram.comments.count}}</span>
+						</a>
+					</div>
+					<a href="#" class="link">
+						<img
+							class="icon"
+							src="{% static 'gram/icons/line/bookmark-alt.svg'%}"
+							alt="bookmark"
+						/>
+					</a>
+				</div>
+				<div class="pindetails">
+					<p class="text">{{gram.title}}</p>
+					<p class="caption">{{gram.caption}}</p>
+					<p class="date">Posted {{gram.posted | timesince}} ago</p>
+				</div>
+			</div>
 		</div>
 		{% else %}
 		<p>Post currently unavailable</p>

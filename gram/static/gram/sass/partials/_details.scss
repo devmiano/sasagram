@@ -1,0 +1,110 @@
+@import 'type';
+@import 'mixins';
+@import 'palette';
+
+#pin {
+	width: 100%;
+	padding: 3rem;
+	@include col-center;
+	border-radius: 0.4rem;
+	background-color: $dark-500;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+		rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+
+	.pinheader {
+		padding: 0.3rem;
+		width: fit-content;
+		height: fit-content;
+		border-radius: 3rem;
+		border: 2px solid $sasa-400;
+
+		.photo {
+			width: 3rem;
+			height: 3rem;
+			@include image;
+			object-fit: cover;
+			border-radius: 3rem;
+		}
+	}
+
+	.pinimage {
+		width: 100%;
+		height: 440px;
+		@include link;
+		margin-top: 1rem;
+
+		.photo {
+			width: 100%;
+			height: 100%;
+			@include image;
+			overflow: hidden;
+			object-fit: cover;
+			border-radius: 0.4rem;
+		}
+	}
+
+	.pinfooter {
+		width: 100%;
+		@include col-center;
+
+		.footer {
+			width: 100%;
+			padding: 1rem 0;
+			@include row-between;
+
+			.left {
+				gap: 0.7rem;
+				align-items: center;
+				@include row-start;
+
+				.link {
+					gap: 0.5rem;
+					@include link;
+					@include row-start;
+
+					.like {
+						@include small;
+						color: $ash-100;
+						font-weight: 400;
+					}
+
+					.icon {
+						height: 1.3rem;
+					}
+				}
+			}
+
+			.link {
+				@include link;
+
+				.icon {
+					height: 1.3rem;
+				}
+			}
+		}
+
+		.pindetails {
+			width: 100%;
+			@include col-start;
+
+			.text {
+				@include subtext;
+				color: $ash-100;
+			}
+
+			.caption {
+				@include small;
+				color: $ash-100;
+				font-weight: 300;
+				font-size: 0.9rem;
+			}
+
+			.date {
+				@include small;
+				color: $ash-400;
+				font-size: 0.8rem;
+				padding-top: 0.5rem;
+			}
+		}
+	}
+}

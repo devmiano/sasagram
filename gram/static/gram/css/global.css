@@ -1243,3 +1243,145 @@ input:-webkit-autofill:focus {
   object-fit: cover;
   border-radius: 0.4rem;
 }
+
+#pin {
+  width: 100%;
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 0.4rem;
+  background-color: #140439;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+#pin .pinheader {
+  padding: 0.3rem;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 3rem;
+  border: 2px solid #6320EE;
+}
+
+#pin .pinheader .photo {
+  width: 3rem;
+  height: 3rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  object-fit: cover;
+  border-radius: 3rem;
+}
+
+#pin .pinimage {
+  width: 100%;
+  height: 440px;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+#pin .pinimage .photo {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  overflow: hidden;
+  object-fit: cover;
+  border-radius: 0.4rem;
+}
+
+#pin .pinfooter {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#pin .pinfooter .footer {
+  width: 100%;
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#pin .pinfooter .footer .left {
+  gap: 0.7rem;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+#pin .pinfooter .footer .left .link {
+  gap: 0.5rem;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+#pin .pinfooter .footer .left .link .like {
+  font-weight: 200;
+  font-size: 0.84rem;
+  font-family: "Outfit", sans-serif;
+  letter-spacing: 0.05rem;
+  color: #F1ECFD;
+  font-weight: 400;
+}
+
+#pin .pinfooter .footer .left .link .icon {
+  height: 1.3rem;
+}
+
+#pin .pinfooter .footer .link {
+  text-decoration: none;
+}
+
+#pin .pinfooter .footer .link .icon {
+  height: 1.3rem;
+}
+
+#pin .pinfooter .pindetails {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#pin .pinfooter .pindetails .text {
+  line-height: 1;
+  font-size: 1.3rem;
+  font-family: "Outfit", sans-serif;
+  letter-spacing: 0.05rem;
+  color: #F1ECFD;
+}
+
+#pin .pinfooter .pindetails .caption {
+  font-weight: 200;
+  font-size: 0.84rem;
+  font-family: "Outfit", sans-serif;
+  letter-spacing: 0.05rem;
+  color: #F1ECFD;
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+#pin .pinfooter .pindetails .date {
+  font-weight: 200;
+  font-size: 0.84rem;
+  font-family: "Outfit", sans-serif;
+  letter-spacing: 0.05rem;
+  color: #9D7BF4;
+  font-size: 0.8rem;
+  padding-top: 0.5rem;
+}

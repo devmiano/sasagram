@@ -1,6 +1,9 @@
 import os
 import dj_database_url
 from decouple import config
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -26,6 +29,7 @@ DISABLE_COLLECTSTATIC=1
 INSTALLED_APPS = [
     'gram',
     'imagekit',
+    'cloudinary'
     'django_sass',
     'debug_toolbar',
     'django.contrib.admin',
@@ -134,3 +138,17 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # EMAIL_PORT = config('EMAIL_PORT')
 # EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 # EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+
+# adding config
+
+# cloudinary.config(
+#     cloud_name="YOUR_CLOUD_NAME",
+#     api_key="YOUR_API_KEY",
+#     api_secret="YOUR_API_SECRET"
+# )
+
+cloudinary.config(
+    cloud_name="devmiano",
+    api_key="156314213666919",
+    api_secret="2SFNeeF3htu_jifTnVbM9vUegtc"
+)

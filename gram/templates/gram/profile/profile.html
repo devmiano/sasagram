@@ -68,7 +68,7 @@
 			{% if user_grams %}
 			<div class="gram">
 				{% for gram in user_grams %}
-				<a class="link" href="#">
+				<a class="link" href="{% url 'details' gram.id %}">
 					<img class="photo" src="{{gram.photo.url}}" alt="{{gram.title}}" />
 				</a>
 				{% endfor %}

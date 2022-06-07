@@ -1,0 +1,19 @@
+{% extends 'gram/base.html' %} {% block content %}
+<main id="main">
+	<section id="hero">
+		<h1 class="title">{{title}}</h1>
+		{% if gram %}
+		<div id="">
+				<img src="{{gram.profile.photo.url}}" alt="{{gram.profile.user.username}}" />
+        <img src="{{gram.photo.url}}" alt="{{gram.title}}" />
+        <p>{{gram.title}}</p>
+				<p>{{gram.caption}}</p>
+				<p>{{gram.posted}}</p>
+				<p>{{gram.likes}}</p>
+		</div>
+		{% else %}
+		<p>Post currently unavailable</p>
+		{% endif %}
+	</section>
+</main>
+{% include 'gram/footer.html' %} {% endblock %}

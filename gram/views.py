@@ -314,3 +314,16 @@ def search(request):
     }
     
   return render(request, template, context)
+
+
+def details(request, gram_id):
+  gram = Gram.objects.filter(id=gram_id).first()
+  title = f'{gram.title}'
+  template = 'gram/details.html'
+
+  context = {
+      'gram': gram,
+      'title': title,
+  }
+
+  return render(request, template, context)

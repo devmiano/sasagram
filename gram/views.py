@@ -317,10 +317,25 @@ def search(request):
 
 
 def details(request, gram_id):
-  gram = Gram.objects.filter(id=gram_id).first()
+  gram = Gram.objects.get(id=gram_id)
+  user_object = User.objects.get(username=request.user.username)
+  user_profile = Profile.objects.get(user=user_object)
+
+  # total_comments = 
   title = f'{gram.title}'
   template = 'gram/details.html'
+  
+  if request.method == 'POST':
+    username = request.user.username
+    caption = request.POST['comment']
+    gram_id = gram_id
 
+    new_comment = Comment.objects.create(
+        caption=caption, username=username, gram_id=gram_id)
+    new_comment.save()
+  
+    return redirect('details', gram_id)
+  
   context = {
       'gram': gram,
       'title': title,

@@ -44,10 +44,10 @@
 				<div class="pindetails">
 					<p class="text">{{gram.title}}</p>
 					<p class="caption">{{gram.caption}}</p>
-					<p class="date">Posted {{gram.posted | timesince}} ago</p>
+					<p class="date">{{gram.posted | timesince}} ago</p>
 				</div>
 			</div>
-			<form class="pinform" action="/comment/" method="POST">
+			<form class="pinform" action="" method="POST">
 				{% csrf_token %}
 				<input
 					class="comment"

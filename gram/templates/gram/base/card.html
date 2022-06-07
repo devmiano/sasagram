@@ -56,7 +56,7 @@
 		</p>
 		{% endif %}
 		<p class="caption">{{gram.title}}</p>
-		<p class="date">{{gram.posted | date:"jS M Y"}}</p>
+		<p class="date">{{gram.posted | timesince}} ago</p>
 	</div>
 </div>
 {% endfor %}

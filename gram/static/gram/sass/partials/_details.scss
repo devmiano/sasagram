@@ -14,7 +14,15 @@
 	.pinbar {
 		gap: 2rem;
 		width: 100%;
+		align-items: center;
 		@include grid-three;
+
+		.icons {
+			.icon {
+				width: 0.5rem;
+				height: 0.5rem;
+			}
+		}
 
 		.pinheader {
 			padding: 0.3rem;
@@ -29,16 +37,6 @@
 				@include image;
 				object-fit: cover;
 				border-radius: 3rem;
-			}
-
-			.icon {
-				width: 2rem;
-				height: 2rem;
-			}
-
-			.text {
-				@include subtext;
-				color: $ash-100;
 			}
 		}
 	}

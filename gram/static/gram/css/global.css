@@ -1260,9 +1260,15 @@ input:-webkit-autofill:focus {
 #pin .pinbar {
   gap: 2rem;
   width: 100%;
+  align-items: center;
   display: grid;
   grid-auto-rows: 1fr;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+#pin .pinbar .icons .icon {
+  width: 0.5rem;
+  height: 0.5rem;
 }
 
 #pin .pinbar .pinheader {
@@ -1282,19 +1288,6 @@ input:-webkit-autofill:focus {
   background-position: center center;
   object-fit: cover;
   border-radius: 3rem;
-}
-
-#pin .pinbar .pinheader .icon {
-  width: 2rem;
-  height: 2rem;
-}
-
-#pin .pinbar .pinheader .text {
-  line-height: 1;
-  font-size: 1.3rem;
-  font-family: "Outfit", sans-serif;
-  letter-spacing: 0.05rem;
-  color: #F1ECFD;
 }
 
 #pin .pinimage {

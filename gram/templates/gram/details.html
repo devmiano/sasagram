@@ -3,13 +3,30 @@
 	<section id="hero">
 		{% if gram %}
 		<div id="pin">
+		<div class="pinbar">
+				<a class="pinheader" href="{% url 'index' %}">
+				<img
+					class="icon"
+					src="{% static 'gram/icons/fill/fill-arrow-left.svg'%}"
+					alt="back"
+				/>
+			</a>
 			<a class="pinheader" href="{% url 'profile' gram.user %}">
 				<img
 					class="photo"
 					src="{{gram.profile.photo.url}}"
 					alt="{{gram.profile.user.username}}"
 				/>
+				<p class="text">{{gram.profile.user.username}}</p>
 			</a>
+			<a class="pinheader" href="{% url 'index %}">
+				<img
+					class="icon"
+					src="{% static 'gram/icons/fill/fill-arrow-right.svg'%}"
+					alt="next"
+				/>
+			</a>
+		</div>
 			<div class="pinimage">
 				<img class="photo" src="{{gram.photo.url}}" alt="{{gram.title}}" />
 			</div>

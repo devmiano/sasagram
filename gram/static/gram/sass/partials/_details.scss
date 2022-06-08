@@ -4,26 +4,42 @@
 
 #pin {
 	width: 100%;
-	padding: 3rem;
+	padding: 3rem 2rem;
 	@include col-center;
 	border-radius: 0.4rem;
 	background-color: $dark-500;
 	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
 		rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 
-	.pinheader {
-		padding: 0.3rem;
-		width: fit-content;
-		height: fit-content;
-		border-radius: 3rem;
-		border: 2px solid $sasa-400;
+	.pinbar {
+		gap: 2rem;
+		width: 100%;
+		@include grid-three;
 
-		.photo {
-			width: 3rem;
-			height: 3rem;
-			@include image;
-			object-fit: cover;
+		.pinheader {
+			padding: 0.3rem;
+			width: fit-content;
+			height: fit-content;
 			border-radius: 3rem;
+			border: 2px solid $sasa-400;
+
+			.photo {
+				width: 3rem;
+				height: 3rem;
+				@include image;
+				object-fit: cover;
+				border-radius: 3rem;
+			}
+
+			.icon {
+				width: 2rem;
+				height: 2rem;
+			}
+
+			.text {
+				@include subtext;
+				color: $ash-100;
+			}
 		}
 	}
 

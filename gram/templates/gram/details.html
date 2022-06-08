@@ -4,7 +4,7 @@
 		{% if gram %}
 		<div id="pin">
 			<div class="pinbar">
-				<a class="pinheader" href="{% url 'index' %}">
+				<a class="" href="{% url 'index' %}">
 					<img
 						class="icon"
 						src="{% static 'gram/icons/fill/fill-arrow-left.svg'%}"
@@ -17,9 +17,8 @@
 						src="{{gram.profile.photo.url}}"
 						alt="{{gram.profile.user.username}}"
 					/>
-					<p class="text">{{gram.profile.user.username}}</p>
 				</a>
-				<a class="pinheader" href="{% url 'index' %}">
+				<a class="" href="{% url 'index' %}">
 					<img
 						class="icon"
 						src="{% static 'gram/icons/fill/fill-arrow-right.svg'%}"

@@ -1,0 +1,111 @@
+@import 'type';
+@import 'mixins';
+@import 'palette';
+
+.forms {
+	margin-top: 1rem;
+	width: 100%;
+	min-height: 70vh;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	background-color: $dark-500;
+	padding: 2rem;
+	border-radius: 0.3rem;
+}
+
+#form {
+	width: 100%;
+
+	.group {
+		width: 100%;
+		margin: 0.7rem 0;
+		@include col-start;
+
+		.label {
+			@include small;
+			color: $ash-200;
+		}
+
+		.input {
+			width: 100%;
+			@include input;
+		}
+	}
+
+	.container {
+		gap: 1rem;
+		@include grid-two;
+		align-items: flex-start;
+
+		.groups {
+			@include col-start;
+
+			.group {
+				width: 100%;
+				margin: 0.7rem 0;
+				@include col-start;
+
+				.label {
+					@include small;
+					color: $ash-200;
+				}
+
+				.input {
+					width: 100%;
+					@include input;
+				}
+			}
+		}
+
+		.group {
+			width: 100%;
+			margin: 0.7rem 0;
+			@include col-start;
+
+			.photo {
+				width: 240px;
+				height: 240px;
+				@include image;
+				margin: 0.7rem 0;
+				object-fit: cover;
+				border-radius: 0.3rem;
+			}
+
+			.label {
+				@include small;
+				color: $ash-200;
+			}
+
+			.input {
+				width: 100%;
+				@include input;
+			}
+		}
+	}
+
+	.btn {
+		width: 100%;
+		@include btn;
+		margin-top: 1.5rem;
+	}
+
+	.cta {
+		gap: 1rem;
+		@include grid-two;
+		margin-top: 1.5rem;
+
+		.btn-submit {
+			width: 100%;
+			@include btn;
+		}
+
+		.btn-link {
+			width: 100%;
+			@include link;
+			@include btn-alt;
+			text-align: center;
+		}
+	}
+}

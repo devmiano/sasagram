@@ -1,0 +1,283 @@
+@import 'type';
+@import 'mixins';
+@import 'palette';
+
+#navbar {
+	width: 100%;
+	padding: 1rem;
+	@include row-between;
+
+	.menu {
+		gap: 1.4rem;
+		height: 100%;
+		@include grid-five;
+
+		.link {
+			height: 100%;
+
+			.photo {
+				width: 4rem;
+				height: 4rem;
+				@include image;
+			}
+		}
+	}
+
+	.link {
+		height: 100%;
+
+		.photo {
+			width: 2rem;
+			height: 2rem;
+			@include image;
+			object-fit: cover;
+			border-radius: 3rem;
+		}
+	}
+}
+
+.dropdown {
+	height: 100%;
+}
+
+.dropbtn {
+	margin: 0;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 0.1rem;
+	border-radius: 5rem;
+	background-color: $sasa-400;
+
+	.dropphoto {
+		width: 2rem;
+		height: 2rem;
+		@include image;
+		object-fit: cover;
+		border-radius: 3rem;
+	}
+}
+
+.searchbtn {
+	margin: 0;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 0.1rem;
+	border-radius: 5rem;
+	background-color: transparent;
+}
+
+.drop-content {
+	z-index: 100;
+	display: none;
+	position: absolute;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+	.btn {
+		float: none;
+		display: block;
+		color: $sasa-200;
+		text-align: left;
+		text-decoration: none;
+
+		&:hover {
+			color: $sasa-100;
+		}
+	}
+}
+
+.show {
+	display: block;
+}
+
+.searchdown {
+	position: relative;
+	display: inline-block;
+
+	&:hover .searchform {
+		gap: 0.2rem;
+		display: block;
+		@include row-center;
+	}
+
+	.searchform {
+		right: -5rem;
+		padding: 2rem;
+		z-index: 100;
+		display: none;
+		position: absolute;
+		border-radius: 0.3rem;
+		background-color: $dark-400;
+
+		.search {
+			display: block;
+			@include input;
+		}
+
+		.inputbtn {
+			display: block;
+			@include btn;
+		}
+	}
+}
+
+#logo {
+	@include icons;
+}
+
+#home {
+	@include icons;
+}
+
+#heart {
+	@include icons;
+}
+
+#add {
+	@include icons;
+}
+
+#search {
+	@include icons;
+}
+
+#settings {
+	@include icons;
+}
+
+#user {
+	@include icons;
+}
+
+#homePath {
+	fill: $dark-100;
+}
+
+#homePathOne {
+	fill: none;
+	stroke: none;
+
+	&:hover,
+	&:active {
+		fill: $sasa-200;
+		stroke: $sasa-200;
+		stroke-width: 0.5rem;
+	}
+
+	&:focus {
+		fill: $sasa-200;
+		stroke: $sasa-200;
+		stroke-width: 0.5rem;
+	}
+}
+
+#heartPath {
+	fill: $sasa-300;
+}
+
+#heartPathOne {
+	fill: none;
+	stroke: none;
+
+	&:hover,
+	&:active {
+		fill: $sasa-200;
+		stroke: $sasa-200;
+		stroke-width: 0.5rem;
+	}
+
+	&:focus {
+		fill: $sasa-200;
+		stroke: $sasa-200;
+		stroke-width: 0.5rem;
+	}
+}
+
+#addPath {
+	fill: $sasa-400;
+}
+
+#addPathOne {
+	fill: none;
+	stroke: $sasa-500;
+	stroke-width: 1rem;
+
+	&:hover,
+	&:active {
+		fill: $sasa-200;
+	}
+
+	&:focus {
+		fill: $sasa-200;
+		stroke: $sasa-500;
+	}
+}
+
+#searchPath {
+	fill: $sasa-100;
+}
+
+#searchPathOne {
+	fill: none;
+	stroke: none;
+
+	&:hover,
+	&:active {
+		fill: $sasa-200;
+		stroke: $sasa-200;
+		stroke-width: 0.5rem;
+	}
+
+	&:focus {
+		fill: $sasa-200;
+		stroke: $sasa-200;
+		stroke-width: 0.5rem;
+	}
+}
+
+#settingsPath {
+	fill: $dark-100;
+}
+
+#settingsPathOne {
+	fill: none;
+	stroke: none;
+
+	&:hover,
+	&:active {
+		fill: $sasa-200;
+		stroke: $sasa-200;
+		stroke-width: 0.5rem;
+	}
+
+	&:focus {
+		fill: $sasa-200;
+		stroke: $sasa-200;
+		stroke-width: 0.5rem;
+	}
+}
+
+#userPath {
+	fill: $dark-100;
+}
+
+#userPathOne {
+	fill: $sasa-100;
+}
+
+#topbar {
+	width: 60%;
+
+	.btn {
+		float: right;
+		@include link;
+		color: $sasa-200;
+		margin: 0 0.5rem;
+
+		&:hover,
+		&:active {
+			color: $sasa-100;
+		}
+	}
+}

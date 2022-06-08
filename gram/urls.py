@@ -13,5 +13,5 @@ urlpatterns = [
     path('like', views.like, name='like'),
     path('follow', views.follow, name='follow'),
     path('search/', views.search, name='search'),
-    path('<gram_id>/', views.details, name='details'),
+    path('grams/<gram_id>/', views.details, name='details'),
 ]

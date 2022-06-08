@@ -1,0 +1,51 @@
+@import 'type';
+@import 'mixins';
+@import 'palette';
+
+#footer {
+	gap: 0.5rem;
+	width: 100%;
+	padding: 1rem;
+	margin-top: auto;
+	@include grid-three;
+
+	@include for-tab {
+		@include col-center;
+		gap: 0rem;
+	}
+
+	.text {
+		@include small;
+		color: $sasa-300;
+		text-align: left;
+
+		@include for-tab {
+			padding: 0.5rem 1rem;
+		}
+	}
+
+	.copy {
+		@include small;
+		color: $sasa-100;
+		text-align: center;
+
+		.gram {
+			@include small;
+			font-weight: 500;
+		}
+
+		@include for-tab {
+			padding: 0.5rem 1rem;
+		}
+	}
+
+	.alt {
+		@include small;
+		color: $sasa-200;
+		text-align: right;
+
+		@include for-tab {
+			padding: 0.5rem 1rem;
+		}
+	}
+}

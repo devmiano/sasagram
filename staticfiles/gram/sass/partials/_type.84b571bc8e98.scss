@@ -1,0 +1,41 @@
+$grand: 'Grand Hotel', cursive;
+$outfit: 'Outfit', sans-serif;
+
+@mixin brandtext {
+	font-family: $grand;
+}
+
+@mixin title {
+	line-height: 1;
+	font-weight: 500;
+	font-size: 2rem;
+	font-family: $outfit;
+	letter-spacing: 0.1rem;
+}
+
+@mixin subtitle {
+	font-size: 1.7rem;
+	font-family: $outfit;
+	letter-spacing: 0.2rem;
+}
+
+@mixin subtext {
+	line-height: 1;
+	font-size: 1.3rem;
+	font-family: $outfit;
+	letter-spacing: 0.05rem;
+}
+
+@mixin text {
+	font-size: 1rem;
+	font-weight: 300;
+	font-family: $outfit;
+	letter-spacing: 0.05rem;
+}
+
+@mixin small {
+	font-weight: 200;
+	font-size: 0.84rem;
+	font-family: $outfit;
+	letter-spacing: 0.05rem;
+}

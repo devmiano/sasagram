@@ -1,0 +1,186 @@
+// Flex Containers
+@mixin row-center {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin col-center {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+}
+
+@mixin row-between {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+@mixin col-start {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+@mixin row-start {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+
+@mixin grid-one {
+	display: grid;
+	grid-auto-rows: 1fr;
+	grid-template-columns: 1fr;
+}
+
+@mixin grid-two {
+	display: grid;
+	grid-auto-rows: 1fr;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+@mixin grid-three {
+	display: grid;
+	grid-auto-rows: 1fr;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+@mixin grid-four {
+	display: grid;
+	grid-auto-rows: 1fr;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+@mixin grid-five {
+	display: grid;
+	grid-auto-rows: 1fr;
+	grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+// Links and Buttons
+@mixin link {
+	text-decoration: none;
+}
+@mixin input {
+	outline: none;
+	color: $sasa-200;
+	font-size: 1rem;
+	padding: 0.5rem 0;
+	border-width: 0 0 3px;
+	border-color: $sasa-500;
+	background: transparent;
+
+	&::placeholder {
+		color: $sasa-200;
+		background: transparent;
+	}
+
+	&:focus {
+		color: $sasa-200;
+		border-color: $sasa-100;
+		background: transparent;
+	}
+
+	&:active {
+		color: $sasa-200;
+		border-color: $sasa-100;
+		background: transparent;
+	}
+
+	&:focus-visible {
+		color: $sasa-200;
+		border-color: $sasa-100;
+		background: transparent;
+	}
+}
+
+@mixin btn {
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-weight: 500;
+	color: $dark-500;
+	font-size: 0.8rem;
+	padding: 0.7rem 1rem;
+	background: $sasa-100;
+	border-radius: 0.3rem;
+	letter-spacing: 0.2rem;
+	text-transform: uppercase;
+	
+
+	&:hover,
+	&:active {
+		color: $sasa-500;
+		background: $sasa-200;
+	}
+
+	&:focus {
+		color: $sasa-200;
+		background: $sasa-300;
+	}
+}
+@mixin btn-alt {
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-weight: 500;
+	color: $sasa-100;
+	font-size: 0.8rem;
+	border-radius: 0.3rem;
+	background: $sasa-500;
+	letter-spacing: 0.2rem;
+	padding: 0.7rem 1rem;
+	text-transform: uppercase;
+
+	&:hover,
+	&:active {
+		color: $dark-500;
+		background: $sasa-300;
+	}
+
+	&:focus {
+		color: $sasa-500;
+		background: $sasa-300;
+	}
+}
+
+// Image
+@mixin image {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center center;
+}
+
+@mixin icons {
+	height: 3rem;
+	width: fit-content;
+}
+
+// Media Queries
+
+// Phone
+@mixin for-phone {
+	@media screen and (min-width: 0px) and(max-width: 600px) {
+		@content;
+	}
+}
+
+// Tablet
+@mixin for-tab {
+	@media screen and (min-width: 601px) and(max-width: 1000px) {
+		@content;
+	}
+}
+
+// Desktop
+@mixin for-desktop {
+	@media screen and (min-width: 1001px) and (max-width: 4000px) {
+		@content;
+	}
+}

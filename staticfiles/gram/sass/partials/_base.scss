@@ -1,0 +1,49 @@
+@import 'type';
+@import 'mixins';
+@import 'palette';
+
+#app {
+	margin: 0 auto;
+	padding: 0.5rem;
+	max-width: 600px;
+	min-height: 100vh;
+	@include col-center;
+
+	#main {
+		width: 100%;
+		height: 100%;
+		@include col-start;
+
+		.title {
+			margin: 1rem 0;
+			@include title;
+			color: $sasa-100;
+		}
+	}
+}
+
+#grid {
+	width: 100%;
+	gap: 0.5rem;
+	@include grid-one;
+
+	@include for-phone {
+		gap: 0.5rem;
+		@include grid-one;
+	}
+	@include for-tab {
+		gap: 0.5rem;
+		@include grid-one;
+	}
+}
+
+#messages {
+	@include col-start;
+
+	.message {
+		color: $error;
+		@include small;
+		font-weight: 400;
+		font-size: 0.9rem;
+	}
+}

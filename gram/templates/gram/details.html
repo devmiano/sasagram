@@ -3,30 +3,30 @@
 	<section id="hero">
 		{% if gram %}
 		<div id="pin">
-		<div class="pinbar">
+			<div class="pinbar">
 				<a class="pinheader" href="{% url 'index' %}">
-				<img
-					class="icon"
-					src="{% static 'gram/icons/fill/fill-arrow-left.svg'%}"
-					alt="back"
-				/>
-			</a>
-			<a class="pinheader" href="{% url 'profile' gram.user %}">
-				<img
-					class="photo"
-					src="{{gram.profile.photo.url}}"
-					alt="{{gram.profile.user.username}}"
-				/>
-				<p class="text">{{gram.profile.user.username}}</p>
-			</a>
-			<a class="pinheader" href="{% url 'index %}">
-				<img
-					class="icon"
-					src="{% static 'gram/icons/fill/fill-arrow-right.svg'%}"
-					alt="next"
-				/>
-			</a>
-		</div>
+					<img
+						class="icon"
+						src="{% static 'gram/icons/fill/fill-arrow-left.svg'%}"
+						alt="back"
+					/>
+				</a>
+				<a class="pinheader" href="{% url 'profile' gram.user %}">
+					<img
+						class="photo"
+						src="{{gram.profile.photo.url}}"
+						alt="{{gram.profile.user.username}}"
+					/>
+					<p class="text">{{gram.profile.user.username}}</p>
+				</a>
+				<a class="pinheader" href="{% url 'index %}">
+					<img
+						class="icon"
+						src="{% static 'gram/icons/fill/fill-arrow-right.svg'%}"
+						alt="next"
+					/>
+				</a>
+			</div>
 			<div class="pinimage">
 				<img class="photo" src="{{gram.photo.url}}" alt="{{gram.title}}" />
 			</div>
@@ -80,16 +80,14 @@
 		<p>Post currently unavailable</p>
 		{% endif %}
 		<div id="comments">
-			{% if comments %}
-      {% for comment in comments %}
+			{% if comments %} {% for comment in comments %}
 			<div class="comment">
 				<a class="link" href="{% url 'profile' comment.username %}">
 					<p class="user">{{comment.username}}</p>
 				</a>
 				<p class="caption">{{comment.caption}}</p>
 			</div>
-      {% endfor %}
-			{% else %}
+			{% endfor %} {% else %}
 			<p class="caption">no comments yet</p>
 			{% endif %}
 		</div>

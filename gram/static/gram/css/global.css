@@ -1247,7 +1247,7 @@ input:-webkit-autofill:focus {
 
 #pin {
   width: 100%;
-  padding: 3rem;
+  padding: 3rem 2rem;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -1257,7 +1257,15 @@ input:-webkit-autofill:focus {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 
-#pin .pinheader {
+#pin .pinbar {
+  gap: 2rem;
+  width: 100%;
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+#pin .pinbar .pinheader {
   padding: 0.3rem;
   width: fit-content;
   height: fit-content;
@@ -1265,7 +1273,7 @@ input:-webkit-autofill:focus {
   border: 2px solid #6320EE;
 }
 
-#pin .pinheader .photo {
+#pin .pinbar .pinheader .photo {
   width: 3rem;
   height: 3rem;
   background-size: cover;
@@ -1274,6 +1282,19 @@ input:-webkit-autofill:focus {
   background-position: center center;
   object-fit: cover;
   border-radius: 3rem;
+}
+
+#pin .pinbar .pinheader .icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+#pin .pinbar .pinheader .text {
+  line-height: 1;
+  font-size: 1.3rem;
+  font-family: "Outfit", sans-serif;
+  letter-spacing: 0.05rem;
+  color: #F1ECFD;
 }
 
 #pin .pinimage {

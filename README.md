@@ -23,10 +23,11 @@ A Photo Sharing Web Application built in Python and Django
 
 ## BDD
 
-> The web application displays the recent wildlife shots added by the admin user on the homepage.
-> Authors can sign up and edit the shots in the application via the admin dashboard.
-> The app also has links to the various shot categories on the sidebar.
-> You can also copy the link to the shot.
+> This web application is a photo sharing site based on Instagram.
+> Users can display recent shots and view them on the homepage.
+> Users can also sign up and edit their profile in the application via the Settings page.
+> The app also lets you follow other users and get to see their posts in the feed directly.
+> You can also like or dislike other users posts.
 
 ## Technologies used
 
@@ -35,6 +36,7 @@ A Photo Sharing Web Application built in Python and Django
 - Django
 - Javascript
 - PostgreSQL
+- Cloudinary
 
 ## License
 

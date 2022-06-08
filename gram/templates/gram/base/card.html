@@ -5,7 +5,7 @@
 			<img class="prof" src="{{gram.profile.photo.url}}" alt="{{gram.user}}" />
 			<p class="name">@{{gram.user}}</p>
 		</a>
-		<a href="#" class="link">
+		<a href="{% url 'details' gram.id %}" class="link">
 			<img
 				class="icon"
 				src="{% static 'gram/icons/line/ellipsis.svg'%}"
@@ -13,7 +13,7 @@
 			/>
 		</a>
 	</div>
-	<a class="post" href="#">
+	<a class="post" href="{% url 'details' gram.id %}">
 		<img class="image" src="{{gram.photo.url}}" alt="{{gram.title}}" />
 	</a>
 	<div class="footer">

@@ -7,10 +7,10 @@ import cloudinary.api
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# SECRET_KEY = config('SECRET_KEY')
-SECRET_KEY = '8CBF1494E466D32FACB9002F018FFFB55ADE76B4A1BCA848926D586D1C5B2E6B'
-DEBUG = True
-ALLOWED_HOSTS = []
+SECRET_KEY = config('SECRET_KEY')
+
+DEBUG = False
+ALLOWED_HOSTS = ['sasagram.herokuapp.com', '127.0.0.1']
 INTERNAL_IPS = ['127.0.0.1']
 DISABLE_COLLECTSTATIC = 1
 
@@ -37,6 +37,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'core.urls'
@@ -69,14 +70,9 @@ WSGI_APPLICATION = 'core.wsgi.application'
 #     }
 # }
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'sasagram',
-        'USER': 'postgres',
-        'PASSWORD': 'devmiano',
-    }
-}
+
+DATABASES = {'default': dj_database_url.config(
+    default='postgres://postgres:devmiano@localhost/sasagram')}
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -93,7 +89,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'Africa/Nairobi'
 USE_L10N = True
@@ -106,28 +101,18 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_FILES_DIRS = [os.path.join(BASE_DIR, 'static')],
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# EMAIL_USE_TLS = config('EMAIL_USE_TLS')
-# EMAIL_HOST = config('EMAIL_HOST')
-# EMAIL_PORT = config('EMAIL_PORT')
-# EMAIL_HOST_USER = config('EMAIL_HOST_USER')
-# EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
-
-# cloudinary.config(
-#     cloud_name=config('CLOUDINARY_NAME'),
-#     api_key=config('CLOUDINARY_API_KEY'),
-#     api_secret=config('CLOUDINARY_API_SECRET')
-# )
-
-EMAIL_USE_TLS = True,
-EMAIL_HOST = 'smtp.gmail.com',
-EMAIL_PORT = 587,
-EMAIL_HOST_USER = 'mistarideck@gmail.com',
-EMAIL_HOST_PASSWORD = '2103DD5EF304BB7205A2B4EE2C0B9CE19FC9BFEE',
+EMAIL_USE_TLS = config('EMAIL_USE_TLS')
+EMAIL_HOST = config('EMAIL_HOST')
+EMAIL_PORT = config('EMAIL_PORT')
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 
 cloudinary.config(
-    cloud_name='devmiano',
-    api_key='156314213666919',
-    api_secret='2SFNeeF3htu_jifTnVbM9vUegtc',
+    cloud_name=config('CLOUDINARY_NAME'),
+    api_key=config('CLOUDINARY_API_KEY'),
+    api_secret=config('CLOUDINARY_API_SECRET')
 )
